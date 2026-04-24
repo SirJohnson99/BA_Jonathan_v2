@@ -1,0 +1,85 @@
+\usepackage{avant} 							%Avant als normale Schrift 
+\usepackage[helvet]{sfmath} 					%serifenfreie Schrift f\"ur Mathmode
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[onehalfspacing]{setspace}			% Das brauchen eigentlich nur Leute, die
+                                							% viel zu kleine R\UTF{00E4} verwenden oder keine
+                                							% Korrekturzeichen beherrschen
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc} 					% Zeichensatz, erm�glicht die direkte Eingabe von Umlauten im Editor
+\usepackage[pdftex]{graphicx} 					% Einbindung von Grafiken (pdf, png, jpg)
+\usepackage{float}            					         % bietet Option [H] f�r bombenfestes Verankern
+\usepackage[ngerman]{babel}   					% Silbentrennung nach der neuen deutschen Rechtschreibung, z.B.: Sys-tem
+\usepackage{amstext}          					% f�r Klartext via \text{} in Formeln
+\usepackage{amsfonts} 
+\usepackage{amsmath}        				         % f�r komplexere Formeln (Mengensymbole ...)
+\usepackage{amssymb}        					 % f�r komplexere Formeln (Mengensymbole ...)
+\usepackage{bm}           					         % bold math, f�r \bm{}
+\usepackage{enumerate}        					% verbessert Aufz�hlungen
+\usepackage[bottom]{footmisc} 					% Fussnoten am Seitenende
+\interfootnotelinepenalty=10000 				% Verhindert Fußnoten-Trennung über Seiten
+\usepackage{array}            					% f�r Tabellen: bindet tabular-Umgebung ein
+\usepackage{tabularx}						% f�r Tabellen mit automatischer Spaltenbreite
+\usepackage{longtable}        					% f�r Tabellen mit Seitenumbruch
+\usepackage{algorithm}        					% f�r Algorithmen
+\usepackage{algorithmic}      					% f�r Algorithmen
+\usepackage{ntheorem}
+\usepackage{theorem}
+\usepackage{pdfpages}         					% f�r die Einbindung kompletter pdf-*Seiten*
+\usepackage{parskip}          					% zw. Abs�tzen: eine knappe Leerzeile statt h�ngender Einz�ge
+\usepackage[right]{eurosym}   					% Eurosymbol
+\usepackage{xcolor}           					% farbiger Text
+\usepackage{color}
+\definecolor{OBlue}{rgb}{0.0,0.2,0.4}
+\definecolor{OOrange}{rgb}{1.0,0.55,0.0}
+\PassOptionsToPackage{hyphens}{url}    					% f�r \url{http://www}, Option hyp erlaubt auch Umbruch nach "-"
+\usepackage[colorlinks=true,linkcolor=OBlue,citecolor=black]{hyperref}			%Farbe Dunkelrot definieren
+%\usepackage{colortbl}
+%\usepackage{makeidx}          					% Package zur Indexerstellung
+%\usepackage{multicol}         					% zur Indexerstellung in zwei Spalten
+\usepackage[backend=biber, style=numeric, citestyle=numeric-comp]{biblatex}   % Numerischer Stil [1], [2], ...
+% Eckige Klammern für Zitierungen erzwingen
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
+\setlength{\bibitemsep}{1\baselineskip}   % Freie Zeile zwischen Quellen
+\usepackage{wasysym}
+\usepackage{pdfpages}						%Einf\"ugen von externen PDF-Dokumenten
+\usepackage{epstopdf}
+\usepackage[nice]{nicefrac}					%f\"ur Br\"uche im Text
+\usepackage{fancyhdr}						%Kopf und Fu{\ss}zeile erm\"oglichen
+\usepackage[T1]{fontenc}
+\newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+\changefont{ptm}{m}{n}
+\linespread {1.5}	
+
+\sloppy  
+\usepackage{titlesec}
+\titleformat{\chapter}{\bf\Huge}{\thechapter\quad}{0em}{}
+\let\cleardoublepage\clearpage                     					
+
+%%%%%%%%%%%%%%%%
+%Anpassung Inhaltsverzeichnis
+%\usepackage{tocstyle}[2008/10/20]				%allwithdot oder noonewithdot verwenden
+%\usetocstyle{noonewithdot} 					%ohne Punkte im Verzeichnis
+
+\usepackage{verbatim}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{polar}
+\usepackage{siunitx}
+\sisetup{locale=DE}
+
+% Gr��enanpassungen
+\setlength{\unitlength}{1cm}
+\setlength{\oddsidemargin}{0.3cm}
+\setlength{\evensidemargin}{0.3cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{-1.2cm}
+\setlength{\textheight}{23cm}
+\columnsep 0.5cm
+
+\makeindex 									% erstelle einen Index bzw. ein Sachverzeichnis)
+\hyphenation{Samm-lung-en Samm-lung Stau-beck-en Vor-na-me-in-i-ti-al % Ver-st\"ar-ker-aus-gang 
+Nach-na-me Kurz-be-zeich-nung deutsch-spra-chige deutsch-sprachig Screen-shot Screen-shots schluss-end-lich Schluss-end-lich Make-In-dex Da-tei-name Da-tei-namen Ur-instinkt Ur-instinkte}

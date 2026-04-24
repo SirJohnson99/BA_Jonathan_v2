@@ -1,0 +1,23 @@
+# Kompilierte PDF
+*.pdf
+
+# LaTeX Build-Dateien
+*.aux
+*.log
+*.out
+*.toc
+*.lot
+*.lof
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+
+# Temporäre Dateien
+*.tmp
+*.bak
+*~

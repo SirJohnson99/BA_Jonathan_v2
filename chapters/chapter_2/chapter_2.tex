@@ -1,0 +1,199 @@
+\chapter{Grundlagen}
+
+Folgend werden die wissenschaftlichen Grundlagen dargelegt, auf denen die in dieser Arbeit eingesetzten Konzepte beruhen. Zum Verstehen dieser Arbeit ist ein grundlegendes Verständnis von Physik und Akustik vorauszusetzen. Weiteres Fachwissen sowie die zum Verstehen dieser Arbeit notwendigen Grundlagen werden in diesem Kapitel erläutert. 
+
+
+\section{DML-Technologie}
+
+Bei einem DML handelt es sich um einen Lautsprecher, welcher sich von konventionellen Membranlautsprechern grundlegend unterscheidet. Ein DML, auch bekannt als Flach- oder Panel-Lautsprecher, ist eine Bauform eines Biegewellenwandlers, bei der eine Platte oder ein Panel mithilfe eines elektrodynamischen Körperschallwandlers, welcher auch als Exciter bezeichnet wird, angeregt wird. Bei dieser Anregung entstehen Plattenbiegewellen, die auf der Oberfläche der Platte verlaufen. Die Schwingungen werden von der Gesamtoberfläche abgestrahlt und erzeugen somit hörbaren Schall \cite{Moeser2005}. Damit stellen DML-Flachlautsprecher eine fundamentale Alternative zur konventionellen Kolbenstrahler-Technologie dar. Denn im Gegensatz zu klassischen Lautsprechern, wo die Lautsprechermembran angeregt kolbenartige Bewegungen ausführt, basiert die DML-Technologie auf der gezielten Anregung von Biegewellen in einer Platte. 
+Bei einem DML-Flachlautsprecher breiten sich die vom Exciter erzeugten Anregungen konzentrisch vom Anregungspunkt, wie Wellen auf einer Wasseroberfläche aus. Die Biegewellengeschwindigkeit ist dabei nicht konstant, sondern frequenzabhängig, da Biegewellen dispersiv sind \cite{Moeser2005}. Dies bedeutet, dass höhere Frequenzen sich schneller auf der Platte ausbreiten als niedrige. Im Gegensatz zu Longitudinalwellen in Gasen, die eine konstante Ausbreitungsgeschwindigkeit besitzen, erzeugt diese Dispersion auf dem DML-Panel eine frequenzabhängige Interferenz verschiedener Moden, die wiederum das charakteristische Abstrahlmuster von DML-Flachlautsprechern bestimmt.
+
+
+Ein zentrales Merkmal eines DML-Flachlautsprechers ist die sogenannte Koinzidenzfrequenz. Bei dieser Frequenz stimmt die Biegewellengeschwindigkeit auf der Platte mit der Schallgeschwindigkeit in der umgebenden Luft überein. Unterhalb der Koinzidenzfrequenz strahlt die Platte diffus und omnidirektional ab, die Schallabstrahlung erfolgt nicht aus einer kohärenten Wellenfläche, sondern durch die Überlagerung zahlreicher, zum Teil gegenphasiger Flächenelemente \cite{Cremer1996}. Oberhalb der Koinzidenzfrequenz hingegen wird die Abstrahlung deutlich effizienter, da sich die Biegewellen auf der Platte phasenkohärent mit der umgebenden Luftschallwelle koppeln können. Diese beiden Betriebsbereiche prägen das Gesamtverhalten von DML-Flachlautsprechern.
+
+
+Der Vorteil eines DML-Flachlautsprechers liegt vor allem in seinem breiten, räumlich gleichmäßigen Schallfeld, das sich durch die diffuse Abstrahlung in einem weiten Frequenzbereich ergibt. Dies macht diese Lautsprecherbauform besonders attraktiv für Anwendungen, bei denen eine homogene Beschallung eines Raumes ohne starke Schallbündelung gefordert ist \cite{Beer1999}. Gleichzeitig sind der verhältnismäßig niedrige Wirkungsgrad im Tieffrequenzbereich sowie die irregulären Resonanzspitzen im Frequenzgang typische Nachteile. 
+
+\subsection{Material-Parameter und deren Einfluss}
+
+Das vom Exciter angeregte Material und dessen Materialeigenschaften haben einen großen Einfluss auf die resultierende Abstrahlcharakteristik und dadurch auf das akustische Verhalten. Die für die Akustik relevantesten Eigenschaften eines DML-Panels werden maßgeblich von zwei Parametern bestimmt, der Biegesteifigkeit $B$ und der Flächenmasse $m''$. Diese beiden Größen stehen in direkter Beziehung zu den Eigenfrequenzen des Panels. Mit der Kirchhoff-Plattentheorie lassen sich für ein Rechteck mit den Seitenlängen $a$ und $b$ die Eigenfrequenzen der $(m, n)$-ten Mode berechnen, wie in Gleichung \ref{eq:eigenfrequenz} gezeigt wird. \cite{Cremer1996}
+
+\begin{equation}
+f_{m,n} = \frac{\pi}{2} \sqrt{\frac{B}{m''}} \left[ \left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2 \right]
+\label{eq:eigenfrequenz}
+\end{equation}
+
+\begin{itemize}
+    \item $f_{m,n}$ : Frequenz m-ter / n-ter Mode
+    \item $B$ : Biegesteifigkeit $[\text{Nmm}^2]$
+    \item $m''$ : Flächenmasse $[\text{kg/m}^2]$
+    \item $a$; $b$ : Seitenlängen der Platte [m]
+    \item $m$; $n$ : Modenzahl
+\end{itemize}
+
+Die Gleichung \ref{eq:eigenfrequenz} zeigt, dass eine höhere Biegesteifigkeit $B$ zu höheren Eigenfrequenzen führt, während eine größere Flächenmasse $m''$ diese herabsetzt \cite{Cremer1996}. Für eine optimale DML-Leistung ist ein gezieltes Verhältnis zwischen beiden Größen anzustreben. Eine zu hohe Biegesteifigkeit verschiebt die Eigenfrequenzen nach oben und verhindert eine wirksame Anregung im Tieffrequenzbereich, während eine zu geringe Biegesteifigkeit hingegen zu einer hohen modalen Dichte bei niedrigen Frequenzen führt, die zu einer langen Ausschwingzeit beiträgt.
+
+ Materialien, welche eine hohe Biegesteifigkeit bei gleichzeitig geringer Masse aufweisen, sind Sandwichkonstruktionen. Diese zeigen sich in der Praxis als geeignete DML-Platten \cite{Bai2001}. Der Aufbau besteht aus zwei dünnen, biegesteifen Deckschichten, die durch einen leichten Stützkern auf Abstand gehalten werden. Die Deckschichten tragen dabei den weit überwiegenden Anteil der Biegebelastung, während der Kern vor allem die Schubsteifigkeit liefert und die Deckschichten gegen Beulen stützt \cite{Wiedemann2006}. Die effektive Biegesteifigkeit einer solchen Konstruktion lässt sich näherungsweise durch folgende Formel berechnen.
+
+\begin{equation}
+B \approx E \cdot t \cdot \left(\frac{(d-t)}{2}\right)^2
+\label{eq:biegesteifigkeit}
+\end{equation}
+
+\begin{itemize}
+    \item $B$ : Biegesteifigkeit $[\text{Nmm}^2]$
+    \item $E$ : Elastizitätsmodul $[\text{N/mm}^2]$
+    \item $t$ : Stärke der Deckschicht $[\text{mm}]$
+    \item $d$ : Gesamtstärke der Platte [mm]
+\end{itemize}
+
+Wobei $E$ das Elastizitätsmodul, $t$ die Dicke der Deckschicht und $d$ der Abstand zwischen den beiden
+Deckschichten bezeichnen \cite{Wiedemann2006}. Der quadratische Zusammenhang des Deckschichtenabstands $d$ zeigt, dass bereits eine geringe Erhöhung der Kerndicke eine erhebliche Steigerung der Biegesteifigkeit zur Folge hat. Diese Eigenschaft macht Sandwich-Konstruktionen zu einer bewährten Wahl für DML-Panele \cite{Bai2001}. Im Vergleich zu monolithischen Platten bieten solche Aufbauten bei gleicher Biegesteifigkeit eine deutlich geringere Flächenmasse, was sich direkt auf die modale Dichte und somit auf den Frequenzgang auswirkt.
+
+Neben der Steifigkeit und Masse spielt auch die innere Dämpfung des Panelmaterials eine wichtige Rolle. Eine zu geringe Dämpfung führt zu starken, langanhaltenden Resonanzspitzen im Frequenzgang, was den Klang deutlich verfärbt. Eine zu hohe Dämpfung hingegen reduziert die Schallabstrahlungseffizienz und kann bei niedrigen Frequenzen zu einer Verschleierung der Modulationsstruktur führen \cite{Moeser2010}. Ein optimales Dämpfungsniveau liegt im Bereich, bei dem Resonanzamplituden kontrolliert bleiben, ohne die Abstrahlung wesentlich zu beeinträchtigen. Bei der Auswahl des Panelmaterials sollte daher das Gleichgewicht zwischen Steifigkeit, Masse und Dämpfung abgestimmt werden. Dabei ist zu beachten, dass ein niedriges Verhältnis B/$m''$ die Modendichte erhöht und die erste Eigenfrequenz absenkt \cite{Moeser2010}. Gleichzeitig muss eine ausreichende innere Dämpfung gegeben sein, um Resonanzspitzen zu unterdrücken. 
+
+Die Tabelle \ref{tab:materialvergleich} „Materialvergleich für DML" vergleicht verschiedene Materialien anhand ihrer Flächenmasse $m''$ und ihrer inneren Dämpfung. Dabei wird die innere Dämpfung in die Kategorien sehr niedrig bis mittel unterteilt.  
+
+\begin{table}[htbp]
+\centering
+\caption{Materialvergleich für DML}
+\label{tab:materialvergleich}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|p{2.2cm}|p{2.3cm}|c|c|c|p{4.2cm}|}
+\hline
+\textbf{Material} & \textbf{Struktur} & \textbf{m''} & \textbf{Dämpfung} & \textbf{Eignung} & \textbf{Begründung} \\
+ & & \textbf{[g/m²]} & & & \\
+\hline
+CFK/Nomex-Honeycomb & Sandwich: CFK + Nomex-Kern & 35--80 & mittel & $\checkmark\checkmark$ & höchste B/m''-Klasse; niedrige Masse; ideal für prof. DML. \\
+\hline
+Balsa/CFK-Sandwich & Sandwich: CFK + Balsa-Kern & 80--150 & mittel--niedrig & $\checkmark\checkmark$ & sehr hohe spez. Biegesteifigkeit; gut für Niederfrequenz-DML \\
+\hline
+XPS (20\,mm) & Monolithisch & 160--200 & mittel & $\checkmark$ & DIY-Material; gute Dämpfung; für Höchstfrequenzen \\
+\hline
+KAPA\textsuperscript{\textregistered}line 15\,mm\textsuperscript{*} & Sandwich: PU + Karton & 1.037 & mittel & $\circ$ & m'' zu hoch; als Prototyp möglich \\
+\hline
+KAPA\textsuperscript{\textregistered}graph 5\,mm\textsuperscript{*} & Sandwich: PU + Karton & 715 & mittel & $\circ$ & leichter als KAPA\textsuperscript{\textregistered}line, steifere Deckschichten \\
+\hline
+Sperrholz (4\,mm) & monolithisch (Leimholz) & 1.200--1.600 & niedrig & $\circ$ & anisotrop; Masse zu hoch für eff. Abstrahlung \\
+\hline
+Gipskarton & monolithisch & 8.000--12.000 & sehr niedrig & $\times$ & sehr hohe Masse; keine Abstrahlung möglich \\
+\hline
+Aluminium (1\,mm) & monolithisch & 2.700 & sehr niedrig & $\times$ & Masse zu groß; Dämpfung $\approx$ 0; Resonanzspitzen \\
+\hline
+\end{tabular}
+
+\vspace{0.2cm}
+\scriptsize
+\textbf{Legende:} $\checkmark\checkmark$ sehr geeignet \quad $\checkmark$ geeignet \quad $\circ$ bedingt geeignet \quad $\times$ nicht geeignet \quad
+\textsuperscript{*} Datenblatt 3A Composites, 06/2021
+
+\textbf{Quellen:} \cite{Moeser2005}; \cite{Zenker2019}; 3A Composites GmbH; \cite{Wiedemann2006}.
+\end{table}
+
+In der ersten Spalte der Tabelle werden die jeweiligen Materialnamen aufgeführt, während die zweite Spalte den strukturellen Aufbau beschreibt. Darauffolgend werden in Spalte drei und vier die Flächenmasse und innere Dämpfung dargestellt. In Spalte fünf folgt eine Bewertung der Eignung der Materialien für den Einsatz als DML anhand von Symbolen, welche in der Legende erläutert werden. In der sechsten Spalte wird die Eignung anhand einer kurzen Begründung ergänzt. Die Tabelle ist von oben nach unten absteigend angeordnet und beginnt mit besonders geeigneten bis hin zu ungeeigneten Materialien. 
+
+
+\subsection{Exciter-Position und deren Einfluss}
+
+Die Position des Körperschallwandlers auf dem DML-Panel hat einen entscheidenden Einfluss darauf, welche Eigenmoden im Panel angeregt werden und wie effizient diese zur Schallabstrahlung beitragen. Jede Mode in einem endlichen Panel besitzt charakteristische Eigenformen und Knotenpunkte, an diesen Stellen geht die Schwingungsamplitude gegen null. Wenn ein Körperschallwandler auf einem Knotenpunkt platziert wird, kann die entsprechende Mode nicht wirksam angeregt werden. Die Platzierung des Körperschallwandlers ist daher von zentraler Bedeutung, um eine gleichmäßige Modenanregung über den Frequenzbereich zu erhalten. 
+
+Eine symmetrische Anordnung des Exciters in der Panelmitte ist aus physikalischer Sicht unvorteilhaft, da in der Mitte eines rechteckigen Panels zahlreiche Knotenpunkte indizierter Moden zusammenfallen. Somit können von diesem Exciter nicht alle Moden angeregt werden \cite{Moeser2010}. Aus diesem Grund wird sowohl von Exciter-Herstellern als auch in der Fachliteratur eine asymmetrische Positionierung des Exciters empfohlen \cite{Bai2001, DaytonAudio2024}.
+
+Eine Studie der Technischen Universität Dresden analysierte die Positionierung von Excitern auf einem rechteckigen DML-Panel anhand von fünfundzwanzig unterschiedlichen Anregungspunkten mittels numerischer Simulation. Die dabei erzielten Ergebnisse zeigen, dass die optimale Anreger-Position maßgeblich von der Panelgeometrie und deren Maßen, den Materialeigenschaften sowie vom gewünschten Frequenzbereich abhängt. Die Analyse erfolgte auf Basis der in der Simulation berechneten abgestrahlten Schallleistung. Eine universell optimale Exciter-Position, welche von der Panelgeometrie und deren Materialeigenschaften unabhängig ist, konnte im Rahmen der Untersuchung ausgeschlossen werden. \cite{Zenker2019}
+
+ 
+\section{Vergleich DML zu konventionellen Lautsprechern}
+
+Konventionelle Lautsprecher basieren auf dem Prinzip der Kolbenbewegung, bei der eine Membran, welche meist konisch geformt ist, durch eine Schwingspule in Bewegung versetzt wird. Diese Vor- und Rückbewegung verdrängt Luft und erzeugt Schallwellen \cite{Harris2000}.
+Der DML-Flachlautsprecher, wie in Kapitel 2.1 beschrieben, erzeugt durch die Anregung eines Exciters sich überlagernde Biegewellen, welche sich auf einem Panel ausbreiten und dadurch Schallwellen erzeugen. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pictures/DML_aufbau.png}
+	\caption{Aufbau eines DML Lautsprechers}
+	\label{fig:DML_aufbau}
+\end{figure}
+
+In Abbildung \ref{fig:DML_aufbau} ist der Aufbau eines DML-Lautsprechers abgebildet. Dabei ist unten im Bild der Exciter zu erkennen, welcher aus einem Magneten sowie einer Spule besteht. Beim Aufbau des elektromagnetischen Anregungsmechanismus unterscheidet sich der DML nur wenig zum konventionellen Lautsprecher. Durch das Ansteuern des Exciters wird die Klebefläche, welche mit dem Panel verklebt ist, in Schwingung versetzt. Diese Schwingung wird auf das Panel übertragen. 
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{pictures/Lautsprecher_aufbau.png}
+	\caption{Aufbau eines konventionellen Lautsprechers}
+	\label{fig:Lautsprecher_aufbau}
+\end{figure}
+
+Abbildung \ref{fig:Lautsprecher_aufbau} zeigt den Aufbau eines konventionellen Membranlautsprechers. Zu erkennen ist, dass die Membran mit der Spule verbunden ist und diese bei Anregung in Schwingung versetzt wird.
+
+Ein bedeutender Vorteil von DML-Lautsprechern liegt in ihrer flachen, leichten und konstruktiv gut integrierbaren Bauweise, was im Vergleich der Abbildungen \ref{fig:DML_aufbau} und \ref{fig:Lautsprecher_aufbau} gut zu erkennen ist. Da das abstrahlende Element selbst eine Platte ist, lassen sich DML-Systeme vergleichsweise unauffällig in Fahrzeuginnenräumen, Möbeln, Displays oder Wandstrukturen integrieren. Insbesondere in Anwendungen mit begrenztem Bauraum oder hohen Anforderungen an Design und Flächenintegration bieten sie daher konstruktive Vorteile gegenüber klassischen Lautsprechern mit Korb, Magnetantrieb und definierter Membrangeometrie.
+
+Akustisch zeigen die beiden Systeme jedoch unterschiedliche Stärken und Schwächen. Konventionelle Lautsprecher erreichen in der Regel eine bessere Kontrolle des Tieftonbereichs, einen höheren Wirkungsgrad in dafür optimierten Gehäusekonzepten sowie eine insgesamt besser vorhersagbare Abstimmung des Frequenzgangs.
+DML-Systeme weisen demgegenüber konstruktionsbedingt häufig Defizite im Bassbereich auf, da große Hubbewegungen und eine gezielte tieffrequente Luftverdrängung nur eingeschränkt möglich sind. Daher benötigen DML- und Multiactor-Panel-Systeme zur Verbesserung ihrer Tieftonwiedergabe häufig zusätzliche Entzerrung, spezielle Randbedingungen oder ergänzende konstruktive Maßnahmen.
+
+Auch hinsichtlich der Richtcharakteristik bestehen deutliche Unterschiede. Konventionelle Lautsprecher zeigen typischerweise eine mit steigender Frequenz zunehmende Bündelung, sofern keine besonderen Maßnahmen zur Direktivitätskontrolle getroffen werden. DML-Lautsprecher werden dagegen häufig mit einer breiten und teilweise quasi-omnidirektionalen Abstrahlung im Mittel- und Hochtonbereich in Verbindung gebracht. Diese Eigenschaft kann vorteilhaft sein, wenn eine räumlich diffuse und umhüllende Wiedergabe erwünscht ist. Gleichzeitig kann gerade diese breite Abstrahlung aber auch nachteilig sein, da sie zu einer geringeren Lokalisationsschärfe und zu stärkerer raumabhängiger Wiedergabe sowie zu einer weniger konstanten Off-Axis-Charakteristik führen kann.
+
+Aus systemtechnischer Sicht ist außerdem zu berücksichtigen, dass DML-Lautsprecher häufig eine aufwendigere Abstimmung benötigen. Die vibroakustischen Eigenschaften hängen nicht nur stark von Materialparametern, Plattengeometrie und Randlagerung ab sondern auch von Position und Anzahl der Exciter sowie von zusätzlichen Entzerrungsmaßnahmen. Daher ist die Entwicklung leistungsfähiger DML-Systeme in besonderem Maße von numerischer Simulation, experimenteller Modalanalyse und digitaler Signalverarbeitung geprägt.
+Für konventionelle Lautsprecher existieren hingegen etablierte Auslegungs- und Ersatzmodelle, mit denen sich das Verhalten deutlich standardisierter vorhersagen lässt. Zwar können moderne DML-Systeme durch geeignete Equalization und konstruktive Optimierung deutlich verbessert werden, jedoch ist der Entwicklungsaufwand im Allgemeinen höher.
+
+Hinsichtlich der subjektiven Wahrnehmung ergibt sich kein eindeutiges Überlegenheitsverhältnis. Entzerrte DML-Systeme können in ihrer wahrgenommenen Klangqualität nahe an konventionelle Lautsprechersysteme heranreichen. DML-Lautsprechern werden insbesondere Vorteile hinsichtlich der räumlichen Wiedergabe zugeschrieben. Dies betrifft vor allem Eigenschaften wie die räumliche Umhüllung des Hörers sowie eine große wahrgenommene Abstrahlbreite. Konventionelle Lautsprechersysteme weisen hingegen Vorteile hinsichtlich der Präzision, der Lokalisationsschärfe einzelner Schallquellen sowie Ausgewogenheit der Töne auf. Daraus folgt, dass die Bewertung nicht allein anhand einzelner Messgrößen erfolgen sollte, sondern stets auch vom Anwendungsfall abhängt. Für integrierte, flache und designorientierte Anwendungen können DML-Systeme sehr attraktiv sein, während für eine möglichst lineare, pegelfeste und bassstarke Wiedergabe konventionelle Lautsprecher weiterhin meist im Vorteil sind.
+
+\textbf{Hier vielleicht Streichen}
+
+\textbf{Tabelle Vor- und Nachteile der DML und konventionellen LS}
+
+
+\section{Lautsprechervermessung}
+
+Bei der akustischen Vermessung von Lautsprechern ist das Ziel, das Übertragungsverhalten des Systems über einen möglichst breiten Frequenzbereich zu bestimmen, um Lautsprecher objektiv miteinander vergleichen zu können. Von besonderem Interesse sind dabei der Schalldruckpegel SPL über der Frequenz, dieser wird als Frequenzgang bezeichnet und die Übertragungsfunktion. Da ein Lautsprecher ein frequenzabhängiges dynamisches System darstellt, reicht die Anregung mit einem einzelnen Sinuston nicht aus, um sein vollständiges Verhalten zu charakterisieren. Stattdessen werden Signale verwendet, die entweder den gesamten relevanten Frequenzbereich gleichzeitig oder nacheinander anregen. In der elektroakustischen Messtechnik wird dafür ein Sweepsignal oder ein Weißes Rauschen verwendet.
+
+Ein Sweep-Signal ist ein Anregungssignal, bei dem sich die Frequenz des Signals kontinuierlich mit der Zeit ändert. In der Praxis wird häufig ein linearer oder logarithmischer Sinus-Sweep eingesetzt.
+
+Diese beiden Anregungssignale unterscheiden sich in der Wiedergabe der Frequenzen, da ein Sweep-Signal in einem bestimmten Frequenzbereich jede Frequenz einzeln nacheinander abspielt, während beim weißen Rauschen alle Frequenzen gleichzeitig angeregt werden. 
+
+Obwohl Sweep und weißes Rauschen in ihrem zeitlichen Aufbau verschieden sind, verfolgen beide Verfahren mathematisch dasselbe Ziel, nämlich die Bestimmung der frequenzabhängigen Übertragungsfunktion \(H(f)\) des Lautsprechers. Für ein lineares zeitinvariantes System gilt im Frequenzbereich der Zusammenhang
+
+\begin{equation}
+Y(f) = H(f) \cdot X(f)
+\end{equation}
+
+\begin{itemize}
+    \item $H(f)$ : Übertragungsfunktion
+    \item $X(f)$ : Eingangssignal Spektrum
+    \item $Y(f)$ : Ausgangssignal Spektrum
+\end{itemize}
+
+Daraus ergibt sich die Übertragungsfunktion zu:
+
+\begin{equation}
+H(f) = \frac{Y(f)}{X(f)}.
+\end{equation}
+
+Dieser Zusammenhang ist unabhängig davon, ob als Anregungssignal ein Sweep oder weißes Rauschen verwendet wird. Entscheidend ist, dass das Anregungssignal den zu messenden Frequenzbereich ausreichend anregt und dass das Eingangsspektrum in diesem Bereich nicht verschwindet. Mathematisch betrachtet sind beide Verfahren daher gleichwertig, da sie auf dieselbe Systembeschreibung führen. Der Unterschied liegt daher nicht in der Zielgröße, sondern in der Art der Anregung und in der praktischen Durchführung der Messung.
+
+Die Vor- und Nachteile der beiden Messverfahren werden in Tabelle 2.2 noch einmal zusammengefasst dargestellt.
+
+\textbf{TABELLE Überarbeiten}
+ 
+\begin{table}[h]
+\centering
+\caption{Vor- und Nachteile von Sweep und weißem Rauschen}
+\begin{tabular}{|p{1cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Signalart} & \textbf{Vorteile} & \textbf{Nachteile} \\
+\hline
+\textbf{Sweep} & Hohe Messgenauigkeit; gutes Signal-Rausch-Verhältnis; gezielte frequenzweise Anregung; gut geeignet zur Bestimmung von Frequenzgang, Impulsantwort und Verzerrungen; besonders vorteilhaft bei logarithmischem Sweep & Messung erfolgt zeitlich nacheinander; etwas höherer Auswerteaufwand je nach Verfahren; für reine Echtzeitbeobachtung weniger geeignet \\
+\hline
+\textbf{Weißes Rauschen} & Gleichzeitige breitbandige Anregung; schnelle Messung; gut für Echtzeitanalyse und Übersichtsmessungen; einfache breitbandige Systemanregung & Höhere Störanfälligkeit; geringere Energie pro Einzelfrequenz; statistische Schwankungen; meist Mittelung erforderlich; Verzerrungen schwerer eindeutig zu trennen \\
+\hline
+\end{tabular}
+\label{tab:sweep_weissrauschen}
+\end{table}
+
+Beim Sweep erfolgt die Anregung frequenzselektiv und zeitlich geordnet. Dies führt in der Regel zu einem sehr guten Signal-Rausch-Verhältnis, da die Energie des Eingangssignals zu jedem Zeitpunkt auf einen schmalen Frequenzbereich konzentriert ist. Zusätzlich lassen sich Impulsantworten und Verzerrungsanteile häufig besonders präzise bestimmen.
+
+Bei weißem Rauschen ist die Energie dagegen gleichzeitig auf den gesamten Frequenzbereich verteilt, wodurch der Energieanteil pro Einzelfrequenz geringer ausfällt. Dies macht das Verfahren prinzipiell empfindlicher gegenüber Störgeräuschen und Messunsicherheiten. Gleichzeitig ermöglicht es jedoch eine sehr schnelle breitbandige Systemanregung und eignet sich daher gut für Übersichts- oder Echtzeitmessungen.
+
+
+\newpage
