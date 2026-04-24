@@ -60,26 +60,77 @@ Die Tabelle \ref{tab:materialvergleich} „Materialvergleich für DML" vergleich
 \label{tab:materialvergleich}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{|p{2.2cm}|p{2.3cm}|c|c|c|p{4.2cm}|}
+\begin{tabular}{|p{2.2cm}|p{2.3cm}|c|c|c|p{4.5cm}|}
 \hline
 \textbf{Material} & \textbf{Struktur} & \textbf{m''} & \textbf{Dämpfung} & \textbf{Eignung} & \textbf{Begründung} \\
  & & \textbf{[g/m²]} & & & \\
 \hline
-CFK/Nomex-Honeycomb & Sandwich: CFK + Nomex-Kern & 35--80 & mittel & $\checkmark\checkmark$ & höchste B/m''-Klasse; niedrige Masse; ideal für prof. DML. \\
+CFK/Nomex-Honeycomb & Sandwich: CFK + Nomex-Kern & 35--80 & mittel & $\checkmark\checkmark$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Höchste B/m''-Klasse
+    \item Niedrige Masse
+    \item Ideal für prof. DML
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-Balsa/CFK-Sandwich & Sandwich: CFK + Balsa-Kern & 80--150 & mittel--niedrig & $\checkmark\checkmark$ & sehr hohe spez. Biegesteifigkeit; gut für Niederfrequenz-DML \\
+Balsa/CFK-Sandwich & Sandwich: CFK + Balsa-Kern & 80--150 & mittel--niedrig & $\checkmark\checkmark$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Sehr hohe spez. Biegesteifigkeit
+    \item Gut für Niederfrequenz-DML
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-XPS (20\,mm) & Monolithisch & 160--200 & mittel & $\checkmark$ & DIY-Material; gute Dämpfung; für Höchstfrequenzen \\
+XPS (20\,mm) & Monolithisch & 160--200 & mittel & $\checkmark$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item DIY-Material
+    \item Gute Dämpfung
+    \item Für Höchstfrequenzen
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-KAPA\textsuperscript{\textregistered}line 15\,mm\textsuperscript{*} & Sandwich: PU + Karton & 1.037 & mittel & $\circ$ & m'' zu hoch; als Prototyp möglich \\
+KAPA\textsuperscript{\textregistered}line 15\,mm\textsuperscript{*} & Sandwich: PU + Karton & 1.037 & mittel & $\circ$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item m'' zu hoch
+    \item Als Prototyp möglich
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-KAPA\textsuperscript{\textregistered}graph 5\,mm\textsuperscript{*} & Sandwich: PU + Karton & 715 & mittel & $\circ$ & leichter als KAPA\textsuperscript{\textregistered}line, steifere Deckschichten \\
+KAPA\textsuperscript{\textregistered}graph 5\,mm\textsuperscript{*} & Sandwich: PU + Karton & 715 & mittel & $\circ$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Leichter als KAPA\textsuperscript{\textregistered}line
+    \item Steifere Deckschichten
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-Sperrholz (4\,mm) & monolithisch (Leimholz) & 1.200--1.600 & niedrig & $\circ$ & anisotrop; Masse zu hoch für eff. Abstrahlung \\
+Sperrholz (4\,mm) & monolithisch (Leimholz) & 1.200--1.600 & niedrig & $\circ$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Anisotrop
+    \item Masse zu hoch
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-Gipskarton & monolithisch & 8.000--12.000 & sehr niedrig & $\times$ & sehr hohe Masse; keine Abstrahlung möglich \\
+Gipskarton & monolithisch & 8.000--12.000 & sehr niedrig & $\times$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Sehr hohe Masse
+    \item Keine Abstrahlung möglich
+\end{itemize}
+\vspace{-2mm} \\
 \hline
-Aluminium (1\,mm) & monolithisch & 2.700 & sehr niedrig & $\times$ & Masse zu groß; Dämpfung $\approx$ 0; Resonanzspitzen \\
+Aluminium (1\,mm) & monolithisch & 2.700 & sehr niedrig & $\times$ &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Masse zu groß
+    \item Dämpfung $\approx$ 0
+    \item Resonanzspitzen
+\end{itemize}
+\vspace{-2mm} \\
 \hline
 \end{tabular}
 
@@ -201,21 +252,56 @@ Dieser Zusammenhang ist unabhängig davon, ob als Anregungssignal ein Sweep oder
 
 Die Vor- und Nachteile der beiden Messverfahren werden in Tabelle 2.2 noch einmal zusammengefasst dargestellt.
 
-\textbf{TABELLE Überarbeiten}
- 
 \begin{table}[h]
 \centering
 \caption{Vor- und Nachteile von Sweep und weißem Rauschen}
-\begin{tabular}{|p{1cm}|p{5cm}|p{5cm}|}
+\label{tab:sweep_weissrauschen}
+\begin{tabular}{|p{2cm}|p{5.5cm}|p{5.5cm}|}
 \hline
 \textbf{Signalart} & \textbf{Vorteile} & \textbf{Nachteile} \\
 \hline
-\textbf{Sweep} & Hohe Messgenauigkeit; gutes Signal-Rausch-Verhältnis; gezielte frequenzweise Anregung; gut geeignet zur Bestimmung von Frequenzgang, Impulsantwort und Verzerrungen; besonders vorteilhaft bei logarithmischem Sweep & Messung erfolgt zeitlich nacheinander; etwas höherer Auswerteaufwand je nach Verfahren; für reine Echtzeitbeobachtung weniger geeignet \\
+\textbf{Sweep} &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Hohe Messgenauigkeit
+    \item Gutes Signal-Rausch-Verhältnis
+    \item Gezielte frequenzweise Anregung
+    \item Präzise Bestimmung von Frequenzgang und Impulsantwort
+    \item Verzerrungen gut trennbar
+\end{itemize}
+\vspace{-2mm}
+&
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Messung erfolgt zeitlich nacheinander
+    \item Höherer Auswerteaufwand
+    \item Für Echtzeitbeobachtung weniger geeignet
+\end{itemize}
+\vspace{-2mm}
+\\
 \hline
-\textbf{Weißes Rauschen} & Gleichzeitige breitbandige Anregung; schnelle Messung; gut für Echtzeitanalyse und Übersichtsmessungen; einfache breitbandige Systemanregung & Höhere Störanfälligkeit; geringere Energie pro Einzelfrequenz; statistische Schwankungen; meist Mittelung erforderlich; Verzerrungen schwerer eindeutig zu trennen \\
+\textbf{Weißes Rauschen} &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Gleichzeitige breitbandige Anregung
+    \item Schnelle Messung
+    \item Gut für Echtzeitanalyse
+    \item Einfache Systemanregung
+\end{itemize}
+\vspace{-2mm}
+&
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Höhere Störanfälligkeit
+    \item Geringere Energie pro Frequenz
+    \item Statistische Schwankungen
+    \item Mittelung erforderlich
+    \item Verzerrungen schwerer trennbar
+\end{itemize}
+\vspace{-2mm}
+\\
 \hline
 \end{tabular}
-\label{tab:sweep_weissrauschen}
 \end{table}
 
 Beim Sweep erfolgt die Anregung frequenzselektiv und zeitlich geordnet. Dies führt in der Regel zu einem sehr guten Signal-Rausch-Verhältnis, da die Energie des Eingangssignals zu jedem Zeitpunkt auf einen schmalen Frequenzbereich konzentriert ist. Zusätzlich lassen sich Impulsantworten und Verzerrungsanteile häufig besonders präzise bestimmen.
