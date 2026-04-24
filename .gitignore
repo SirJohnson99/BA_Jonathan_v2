@@ -1,5 +1,7 @@
 # Kompilierte PDF
 *.pdf
+# Ausnahme: Ostfalia Logo
+!pictures/Ostfalia_LS_RGB.pdf
 
 # LaTeX Build-Dateien
 *.aux
