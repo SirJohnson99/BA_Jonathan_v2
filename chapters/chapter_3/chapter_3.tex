@@ -260,7 +260,79 @@ Bei der Lagerung oder Aufhängung von DML-Lautsprechern gibt es verschiedene Mö
 
 Im Rahmen dieser Arbeit werden lediglich zwei der sechs aufgezählten Lagerungsmöglichkeiten genauer betrachtet und diskutiert. Dabei handelt es sich um die frei schwebende Aufhängung, bei der der DML an zwei Ecken mittels Fäden an der Decke aufgehangen wird. Diese Lagerung hat den Vorteil, dass wenig äußere Dämpfung den DML beeinflusst und durch die frei schwebende Platte eine gleichmäßige Modenverteilung gewährleistet sowie keine Verfälschung durch Randeffekte verursacht werden. Zudem ist durch die minimale Dissipation der Aufhängung eine gute Tieftonwiedergabe gegeben. Nachteil dieser Aufhängung ist die relativ niedrige Abstrahleffizienz und ein mögliches Pendeln der Platte bei tiefen Frequenzen.
 
-Dem entgegen steht die fest eingespannte Lagerung, bei der die Platte in einem Rahmen, welcher an der Wand befestigt ist, fest eingespannt ist. Der Vorteil dieser Lagerung ist eine hohe Abstrahleffizienz der Platte. Dem entgegen spricht die Unterdrückung der Randmoden, was eine gleichmäßige Modenverteilung stört und den Tiefton unterdrückt. Zudem spricht der erhöhte Konstruktionsaufwand des Rahmens und der Wandbefestigung gegen eine fest eingespannte Lagerung. 
+Dem entgegen steht die fest eingespannte Lagerung, bei der die Platte in einem Rahmen, welcher an der Wand befestigt ist, fest eingespannt ist. Der Vorteil dieser Lagerung ist eine hohe Abstrahleffizienz der Platte. Dem entgegen spricht die Unterdrückung der Randmoden, was eine gleichmäßige Modenverteilung stört und den Tiefton unterdrückt. Zudem spricht der erhöhte Konstruktionsaufwand des Rahmens und der Wandbefestigung gegen eine fest eingespannte Lagerung.
+
+Die Vor- und Nachteile der verschiedenen Lagerungsarten sind in Tabelle \ref{tab:lagerungsarten} zusammengefasst.
+
+\begin{table}[htbp]
+\centering
+\caption{Vor- und Nachteile verschiedener Lagerungsarten}
+\label{tab:lagerungsarten}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{2.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Lagerungsart} & \textbf{Vorteile} & \textbf{Nachteile} \\
+\hline
+Frei schwebend &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Minimale äußere Dämpfung
+    \item Gleichmäßige Modenverteilung
+    \item Keine Randeffekte
+    \item Gute Tieftonwiedergabe
+\end{itemize}
+\vspace{-2mm}
+&
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Niedrige Abstrahleffizienz
+    \item Pendeln bei tiefen Frequenzen
+    \item Geringe mechanische Stabilität
+    \item Praktisch schwer integrierbar
+\end{itemize}
+\vspace{-2mm} \\
+\hline
+Gelenkig gelagert &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Definierte Randbedingungen
+    \item Gute Modellierbarkeit (FEM)
+    \item Höhere Stabilität
+    \item Reproduzierbare Modenstruktur
+\end{itemize}
+\vspace{-2mm}
+&
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Randreflexionen möglich
+    \item Konstruktiv aufwendiger
+    \item Beeinflussung tieffrequenter Moden
+    \item Potentielle Auslöschungen
+\end{itemize}
+\vspace{-2mm} \\
+\hline
+Fest eingespannt &
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Hohe Abstrahleffizienz
+    \item Maximale mechanische Stabilität
+    \item Gute Wandintegration möglich
+\end{itemize}
+\vspace{-2mm}
+&
+\vspace{-2mm}
+\begin{itemize}[leftmargin=*, nosep, topsep=0pt, parsep=0pt]
+    \item Unterdrückung der Randmoden
+    \item Gestörte Modenverteilung
+    \item Tiefton unterdrückt
+    \item Erhöhter Konstruktionsaufwand
+\end{itemize}
+\vspace{-2mm} \\
+\hline
+\end{tabular}
+\end{table}
 
 
 \subsection{Allgemeine Systemauslegung}
