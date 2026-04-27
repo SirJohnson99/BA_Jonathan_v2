@@ -2,6 +2,8 @@
 *.pdf
 # Ausnahme: Ostfalia Logo
 !pictures/Ostfalia_LS_RGB.pdf
+# Ausnahme: Anhang PDFs (Datenblätter, Technische Zeichnungen)
+!chapters/Anhang/*.pdf
 
 # LaTeX Build-Dateien
 *.aux
