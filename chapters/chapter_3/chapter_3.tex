@@ -480,35 +480,43 @@ Die berechneten Eigenmoden der Platten bilden Muster, welche die Verschiebung de
 
 Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eigenmoden_1m} auf der rechten Seite zu sehen ist, zeigt an, dass die dunklen violetten Bereiche eine größere Verschiebung aufweisen. Je heller die Platte, desto weniger Verschiebung. 
 
-Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. 
+Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. Das Skript berechnet für jede mögliche Kombination aus zwei Exciter-Positionen einen Score-Wert, der die Güte der Modenanregung quantifiziert. Die zehn besten Positionspaare werden tabellarisch ausgegeben, wobei neben dem Score auch die prozentuale Modenabdeckung und der minimale Abstand zwischen den Excitern angegeben werden.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/Skript_100x70.png}
-	\caption{Python-Skript zur Auswertung der Exciter-Positionen (100 $\times$ 70\,cm Platte)}
+	\caption{Konsolenausgabe des Python-Skripts mit den Top-10 Exciter-Positionspaaren für die 100 $\times$ 70\,cm Platte. Die optimalen Koordinaten werden sowohl relativ zur Plattenmitte als auch zur Plattenecke angegeben.}
 	\label{fig:skript_100x70}
 \end{figure}
 
+Abbildung \ref{fig:skript_100x70} zeigt die Konsolenausgabe des Auswertungsskripts für die große Platte. Die ermittelten optimalen Positionen liegen bei Exciter~1: $x = 50{,}0$\,mm, $z = 382{,}8$\,mm und Exciter~2: $x = 875{,}0$\,mm, $z = 65{,}6$\,mm (relativ zur linken unteren Ecke).
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Skript_ergebnis_100x70.png}
-	\caption{Ergebnis der Skript-Auswertung: Optimale Exciter-Positionen (100 $\times$ 70\,cm Platte)}
+	\includegraphics[width=\textwidth]{pictures/Skript_ergebnis_100x70.png}
+	\caption{Visualisierung der Skript-Ergebnisse für die 100 $\times$ 70\,cm Platte. Links: Score-Heatmap für Exciter~2 bei fixierter Position von Exciter~1. Rechts: Plattenansicht mit markierten Exciter-Positionen und mittlerer Modenaktivität.}
 	\label{fig:skript_ergebnis_100x70}
 \end{figure}
+
+In Abbildung \ref{fig:skript_ergebnis_100x70} ist links die Score-Heatmap dargestellt, wobei helle Bereiche (hoher Score) günstige Positionen für Exciter~2 anzeigen. Die dunklen Bereiche kennzeichnen Knotenlinien der Eigenmoden, an denen eine Anregung vermieden werden sollte. Rechts ist die mittlere Modenaktivität über alle betrachteten Frequenzen dargestellt, wobei dunkle Bereiche eine geringe Verschiebung und somit geeignete Exciter-Positionen markieren.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/Skript_70x44.png}
-	\caption{Python-Skript zur Auswertung der Exciter-Positionen (70 $\times$ 44\,cm Platte)}
+	\caption{Konsolenausgabe des Python-Skripts mit den Top-10 Exciter-Positionspaaren für die 70 $\times$ 44\,cm Platte.}
 	\label{fig:skript_70x44}
 \end{figure}
 
+Für die kleinere 70 $\times$ 44\,cm Platte (Abbildung \ref{fig:skript_70x44}) ergeben sich die optimalen Positionen bei Exciter~1: $x = 220{,}0$\,mm, $z = 251{,}6$\,mm und Exciter~2: $x = 330{,}0$\,mm, $z = 207{,}8$\,mm.
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Skript_ergebni_70x44.png}
-	\caption{Ergebnis der Skript-Auswertung: Optimale Exciter-Positionen (70 $\times$ 44\,cm Platte)}
+	\includegraphics[width=\textwidth]{pictures/Skript_ergebni_70x44.png}
+	\caption{Visualisierung der Skript-Ergebnisse für die 70 $\times$ 44\,cm Platte. Links: Score-Heatmap für Exciter~2. Rechts: Plattenansicht mit optimalen Exciter-Positionen und Modenaktivität.}
 	\label{fig:skript_ergebnis_70x44}
 \end{figure}
+
+Die Ergebnisse der Heatmap-Analyse für die kleinere Platte (Abbildung \ref{fig:skript_ergebnis_70x44}) zeigen ein charakteristisches Kreuzungsmuster der Knotenlinien in der Plattenmitte, welches bei der Exciter-Positionierung vermieden wurde. Die ermittelten Positionen liegen asymmetrisch zur Plattenmitte und ermöglichen eine breite Anregung der Plattenmoden.
 
 
 
