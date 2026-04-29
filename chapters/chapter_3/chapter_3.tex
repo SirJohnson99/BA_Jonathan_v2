@@ -50,7 +50,7 @@ Die in dieser Arbeit verwendete Software für die Simulation der Platten sowie f
 
 \subsection{Der Exciter}
 
-Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet. Die Abbildung \ref{fig:Exciter} zeigt die Vorder- und Rückseite des verwendeten Exciters, an der Rückseite des Exciters ist die Kontaktfläche, welche mit einem doppelseitigen Klebeband von 3M versehen ist.
+Zum Anregen der Platte werden Körperschallwandler der Firma Dayton Audio verwendet \cite{Visaton}. Die Abbildung \ref{fig:Exciter} zeigt die Vorder- und Rückseite des verwendeten Exciters, an der Rückseite des Exciters ist die Kontaktfläche, welche mit einem doppelseitigen Klebeband von 3M versehen ist.
 
 
 \begin{figure}[H]
@@ -85,7 +85,7 @@ Im Wesentlichen unterscheiden sich die Platten in ihrem E-Modul und der daraus r
 
 \subsection{Verstärker und Equalizer}
 
-Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Körperschallwandler dient.
+Bei der eingesetzten Stereoanlage handelt es sich um die WPA-600 Pro Leistungsendstufe der Firma Wangine Electronics Co., welche als Verstärker zur Ansteuerung der verwendeten Körperschallwandler dient \cite{WangineWPA2024}.
 
 \begin{figure}[H]
 	\centering
@@ -103,7 +103,7 @@ Die Endstufe kann in Kombination mit dem passenden Vorverstärker WVQ-600 Pro de
 
 Bei der Konzeptentwicklung des DML-Flachlautsprechers werden verschiedene Umsetzungsmöglichkeiten dargestellt und anhand ihrer technischen Realisierbarkeit, akustischen Performance sowie ihrer wirtschaftlichen Umsetzbarkeit untersucht, diskutiert und bewertet. Anschließend wird sich für ein Konzept entschieden, welches simuliert und vermessen wird. Neben der grundsätzlichen Systemauslegung wird auch die spätere Lagerung beziehungsweise Aufhängung der Platte betrachtet, da diese das Schwingungsverhalten und somit die akustische Performance maßgeblich beeinflussen kann \cite{Bai2001}.
 
-Die Entscheidungsfindung basiert auf einer gewichteten Nutzwertanalyse, die sowohl technische Kriterien als auch die spezifischen Rahmenbedingungen aus Kapitel 3.1 berücksichtigt. Dadurch wird eine transparente und nachvollziehbare Auswahl des geeigneten Systemkonzepts gewährleistet.
+Die Entscheidungsfindung basiert auf einer gewichteten Nutzwertanalyse \cite{Pahl2013}, die sowohl technische Kriterien als auch die spezifischen Rahmenbedingungen aus Kapitel 3.1 berücksichtigt. Dadurch wird eine transparente und nachvollziehbare Auswahl des geeigneten Systemkonzepts gewährleistet.
 
 Die Entwicklung eines DML-Flachlautsprechers erfordert grundlegende Entscheidungen bezüglich folgender zentraler Systemparameter:
 
@@ -122,7 +122,7 @@ Die Frequenzweichenkonfiguration befasst sich mit der möglichen Verwendung von 
 Während passive Weichen das Signal nach dem Verstärker in die verschiedenen Frequenzbereiche trennt, ermöglicht ein DSP die digitale Signalverarbeitung in Echtzeit. Ein DSP kann neben der Frequenztrennung auch als Equalizer verwendet werden, was insbesondere bei DML-Systemen von Vorteil sein kann. 
 Es ist zu beachten, dass im Übergangsbereich der Frequenzweichen komplexe Interferenzmuster entstehen können, die zu räumlich variierenden Übertragungsfunktionen führen können \cite{Moeser2005}.
 
-Ein DML 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher, welcher den Mittel- und Hochtonbereich abdeckt, und einen Subwoofer, welcher den Tieftonbereich wiedergibt. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa \SI{100}{\hertz}, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen, ist eine Subwoofereinbindung denkbar.
+Ein DML 2-Wege-System mit Subwoofer-Integration umfasst einen DML-Flachlautsprecher, welcher den Mittel- und Hochtonbereich abdeckt, und einen Subwoofer, welcher den Tieftonbereich wiedergibt \cite{Czesak2025}. Dabei wird das Frequenzband in einen Tieftonbereich, typischerweise bis etwa \SI{100}{\hertz}, und einen Mittel- bis Hochtonbereich oberhalb dieser Trennfrequenz aufgeteilt. Ein Vorteil dieser Konfiguration besteht darin, dass die Trennfrequenz unterhalb des sensiblen Vokalbereichs liegt und die Sprachverständlichkeit somit nicht beeinträchtigt wird \cite{Weinzierl2025}. Sollte die Trennfrequenz unterhalb des Vokalbereichs liegen, ist eine Subwoofereinbindung denkbar.
 
 Ein 3-Wege-System unterteilt den Frequenzbereich in ein Tief-, Mittel- und Hochtonspektrum. Bei dieser Bauweise werden separate Treiber für Tief-, Mittel- und Hochtonbereich eingesetzt. Diese Bauweise wird im Zusammenhang mit DML-Flachlautsprechern kritisch bewertet, da die Frequenztrennungen im Stimmbereich zu Verständlichkeitsproblemen und Phasenverschiebungen führen können, die selbst durch digitale Signalverarbeitung nur schwer vollständig korrigierbar sind. Typische Trennfrequenzen von 3-Wege-Systemen liegen im Bereich von etwa \SIrange{500}{1000}{\hertz} für den Übergang zwischen Tief- und Mittelton sowie zwischen \SIrange{4000}{5000}{\hertz} für den Übergang zwischen Mittel- und Hochtonbereich \cite{Weinzierl2025}. Damit befindet sich mindestens eine Trennfrequenz im sensiblen Vokalbereich, weshalb eine 3-Wege-Bauweise für ein DML-System nicht berücksichtigt wird.
 
@@ -426,7 +426,7 @@ In der folgenden Simulation in COMSOL Multiphysics werden die idealen Exciterpos
 
 \section{Simulation in COMSOL Multiphysics}
 
-Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen für die ideale Exciter-Position zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf der Platte anhand einer Modalanalyse zu bestimmen. 
+Ziel der Simulation ist es, den Zeit- und Ressourcenaufwand für experimentelle Untersuchungen für die ideale Exciter-Position zu reduzieren. Die Simulation dient dazu, ideale Positionen der Exciter auf der Platte anhand einer Modalanalyse zu bestimmen \cite{Moeser2020}. 
 Dabei wird anhand von Erfahrungsberichten systematisch untersucht, an welcher Stelle die Exciter angebracht werden sollen und welches der gegebenen Materialien die besseren akustischen Eigenschaften liefert. Die Simulationsergebnisse verfolgen die Optimierung der gegebenen Rahmenbedingungen zur Umsetzung des gewählten Konzepts. Dabei orientiert sich die Simulation an dem in Abschnitt 3.2 definierten Versuchsaufbau. Anschließend werden die Simulationsergebnisse im Freifeldraum des Akustiklabors real nachgebildet, untersucht und diskutiert.  
 
 
@@ -492,7 +492,7 @@ Sim Ergebniss Abbildung 70x44
 
 \section{Realer Versuchsaufbau}
 
-In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt. Zur Durchführung der Messungen sowie zur Signalverarbeitung wird die Software LabVIEW der Firma National Instruments eingesetzt. Der Aufbau des in LabVIEW geschriebenen Programms mit dem das Testsignal generiert wird, dient auch der Erfassung und Weiterverarbeitung der Messdaten und wird in den Folgekapiteln beschrieben.
+In diesem Kapitel wird der Versuchsaufbau zur Vermessung der akustischen Eigenschaften der DML-Lautsprecher beschrieben, realisiert und durchgeführt \cite{Moeser2018}. Zur Durchführung der Messungen sowie zur Signalverarbeitung wird die Software LabVIEW der Firma National Instruments eingesetzt. Der Aufbau des in LabVIEW geschriebenen Programms mit dem das Testsignal generiert wird, dient auch der Erfassung und Weiterverarbeitung der Messdaten und wird in den Folgekapiteln beschrieben.
 Der Versuchsaufbau verfolgt hierbei zwei primäre Ziele, die Erfassung des Frequenzgangs des DML-Lautsprechers der verschiedenen Exciterpositionen sowie die Darstellung des Schallfeldes des DML. 
 
  
