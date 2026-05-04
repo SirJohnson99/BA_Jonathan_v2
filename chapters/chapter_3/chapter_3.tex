@@ -444,18 +444,9 @@ Bei dem in dieser Arbeit aufgebauten Modell wird eine DML-Platte und deren Struk
 
 Bei der Simulation zur Entwicklung des DML wurde sich für eine Eigenfrequenzanalyse der verwendeten Platten und gegen die Simulation eines Exciters als Federmassesystem, welches die Platte anregt und der abgestrahlte Schalldruck berechnet wird, entschieden. Ausschlaggebend für diese Entscheidung ist vor allem der Unterschied in der Komplexität der beiden Aufbauten, da eine Eigenfrequenzanalyse in der Komplexität und Rechenleistung effizienter ist.
 
-Bei der Eigenfrequenzanalyse wurden zwei KAPA Line Platten mit den Größen \SI{1}{\meter} $\times$ \SI{0,7}{\meter} und \SI{0,7}{\meter} $\times$ \SI{0,44}{\meter} auf deren Eigenfrequenzen untersucht. Dabei wurden die Größendaten und die Eigenschaften des Materials im Modelbuilder eingegeben. Die Platte wurde in der Simulation als eine monolithische Platte angenommen und nicht als Sandwichbauweise. Für diesen Aufbau wurde sich aufgrund von geringerer Komplexität des Modells und fehlender Materialeigenschaften entschieden. Da im KAPA Line Datenblatt Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzelnen Materialien, Deckschicht und Kern angegeben wurden. \textbf{Anschließend wurde eine Eigenfrequenzstudie angelegt, bei der die Platten angeregt werden von 0 Hz bis 400 Eigenmoden der Platten berechnet wurden. Die Anzahl der Eigenmoden wurde gewählt, da diese für beide Platten die 1.000 Hz überschritten haben und die Modendichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Im Konzeptentwurf wurde sich für eine freihängende Lagerung entschieden, aus diesem Grund wurde diese in der Simulation ohne Lagerung erstellt. }
+Bei der Eigenfrequenzanalyse wurden zwei KAPA Line Platten mit den Größen \SI{1}{\meter} $\times$ \SI{0,7}{\meter} und \SI{0,7}{\meter} $\times$ \SI{0,44}{\meter} auf deren Eigenfrequenzen untersucht. Dabei wurden die Größendaten und die Eigenschaften des Materials im Modelbuilder eingegeben. Die Platte wurde in der Simulation als eine monolithische Platte angenommen und nicht als Sandwichbauweise. Für diesen Aufbau wurde sich aufgrund von geringerer Komplexität des Modells und fehlender Materialeigenschaften entschieden. Da im KAPA Line Datenblatt Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzelnen Materialien, Deckschicht und Kern angegeben wurden. Anschließend wurde eine Eigenfrequenzstudie angelegt, bei der die Platten angeregt werden von 0 Hz bis 400 Eigenmoden der Platten berechnet wurden. Die Anzahl der Eigenmoden wurde gewählt, da diese für beide Platten die 1.000 Hz überschritten haben und die Modendichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Im Konzeptentwurf wurde sich für eine freihängende Lagerung entschieden, aus diesem Grund wurde diese in der Simulation ohne Lagerung erstellt.
 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Modellaufbau.png}
-	\caption{Modellaufbau der DML-Platte in COMSOL Multiphysics}
-	\label{fig:modellaufbau}
-\end{figure}
-
-
-Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen ist die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei \SI{0}{\hertz} und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
+Der Modellaufbau der Platte in COMSOL Multiphysics ist in Anhang G dargestellt und zeigt die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei \SI{0}{\hertz} und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
 
 
 
@@ -464,21 +455,23 @@ Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen
 
 Die berechneten Eigenmoden der Platten bilden Muster, welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen \ref{fig:eigenmoden_07m} \ref{fig:eigenmoden_1m} zeigen die Muster der simulierten Eigenmoden im bereich der Frequenzen bei \SI{50}{\hertz}, \SI{150}{\hertz}, \SI{300}{\hertz}, \SI{500}{\hertz}, \SI{800}{\hertz} und \SI{1000}{\hertz} an.  
 
+Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eigenmoden_1m} zu sehen ist, zeigt an, dass die dunklen violetten Bereiche eine größere Verschiebung aufweisen. Je heller die Platte, desto weniger Verschiebung. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[angle=270,width=0.8\textwidth]{pictures/Eigenmoden_0.7m.png}
+	\includegraphics[angle=270,width=0.7\textwidth]{pictures/Eigenmoden_0.7m.png}
 	\caption{Eigenmoden der KAPA Line Platte (\SI{0,7}{\meter} $\times$ \SI{0,44}{\meter})}
 	\label{fig:eigenmoden_07m}
 \end{figure}
 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[angle=270,width=0.8\textwidth]{pictures/Eigenmoden_1m.png}
+	\includegraphics[angle=270,width=0.6\textwidth]{pictures/Eigenmoden_1m.png}
 	\caption{Eigenmoden der KAPA Line Platte (\SI{1}{\meter} $\times$ \SI{0,7}{\meter})}
 	\label{fig:eigenmoden_1m}
 \end{figure}
 
-Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eigenmoden_1m} zu sehen ist, zeigt an, dass die dunklen violetten Bereiche eine größere Verschiebung aufweisen. Je heller die Platte, desto weniger Verschiebung. 
+ 
 
 Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. Das Skript berechnet für jede mögliche Kombination aus zwei Exciter-Positionen einen Score-Wert, der die Güte der Modenanregung quantifiziert. Die zehn besten Positionspaare werden tabellarisch ausgegeben, wobei neben dem Score auch die prozentuale Modenabdeckung und der minimale Abstand zwischen den Excitern angegeben werden.
 
@@ -510,14 +503,14 @@ Rechts ist die mittlere Modenaktivität über alle betrachteten Frequenzen darge
 
 Für die kleinere 70 $\times$ 44\,cm Platte (Abbildung \ref{fig:skript_70x44}) ergeben sich die optimalen Positionen bei Exciter~1: $x = 220{,}0$\,mm, $z = 251{,}6$\,mm und Exciter~2: $x = 330{,}0$\,mm, $z = 207{,}8$\,mm.
 
+Die Ergebnisse der Heatmap-Analyse für die kleinere Platte, Abbildung \ref{fig:skript_ergebnis_70x44} zeigen ein charakteristisches Kreuzungsmuster der Knotenlinien in der Plattenmitte, welches bei der Exciter-Positionierung vermieden wurde. Die ermittelten Positionen liegen asymmetrisch zur Plattenmitte und ermöglichen eine breite Anregung der Plattenmoden.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/Skript_ergebni_70x44.png}
 	\caption{Visualisierung der Skript-Ergebnisse für die 70 $\times$ 44\,cm Platte.}
 	\label{fig:skript_ergebnis_70x44}
 \end{figure}
-
-Die Ergebnisse der Heatmap-Analyse für die kleinere Platte, Abbildung \ref{fig:skript_ergebnis_70x44} zeigen ein charakteristisches Kreuzungsmuster der Knotenlinien in der Plattenmitte, welches bei der Exciter-Positionierung vermieden wurde. Die ermittelten Positionen liegen asymmetrisch zur Plattenmitte und ermöglichen eine breite Anregung der Plattenmoden.
 
 
 
@@ -555,7 +548,7 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 \end{figure}
 
 Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in Form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
-Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
+Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Das zugehörige Datenblatt des Step-Down-Converters ist Anhang S zu entnehmen. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
 Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus dem Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
@@ -580,27 +573,27 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 \Delta f = \frac{f_s}{N}
 \end{equation}
 
-Wobei $\Delta f$ die Frequenzauflösung des Spektrums in Hz, $f_s$ die Abtastfrequenz in Hz und $N$ die Anzahl der Abtastwerte pro Datenblock ist. 
+\begin{itemize}
+    \item $\Delta f$ : Frequenzauflösung des Spektrums in Hz
+    \item $f_s$ : Abtastfrequenz in Hz
+    \item $N$ : Anzahl der Abtastwerte pro Datenblock
+\end{itemize}
 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{pictures/Whileschleife.png}
+	\caption{Whileschleife des LabVIEW-Programms zur Vermessung des DML-Lautsprechers}
+	\label{fig:whileschleife}
+\end{figure}
 
-\textbf{Abbildung Whileschleife.PNG}
 
+In der Whileschleife Abbildung \ref{fig:whileschleife} wird das weiße Rauschen erzeugt, die Eingangssignale erfasst und verarbeitet sowie grafisch dargestellt. 
 
-In der Whileschleife wird das weiße Rauschen erzeugt, die Eingangssignale erfasst und verarbeitet sowie grafisch dargestellt. 
-
-Das Weiße Rauschen wird über die Outputkarte NI PXI-6733 welche im Steckplatz 2 des DAQ NI PXI-1033 steckt, ausgegeben. Dafür wird die OutputBox NI SCC-68 verwendet welche einen Cinch-Anschluss am Output 22 und 54 angeschlossen hat. Das weiße Rauschen wird mit Hilfe des Uniform White Noise Waveform VI generiert.
+Das Weiße Rauschen wird wird in der Whileschleife mit der Uniform White Noise Waveform VI generiert und über die Outputkarte NI PXI-6733 welche im Steckplatz 2 des DAQ NI PXI-1033 steckt, ausgegeben. Dafür wird die OutputBox NI SCC-68 verwendet welche einen Cinch-Anschluss am Output 22 und 54 angeschlossen hat. 
 
 Das Eingangssignal von der NI PXI-4472B welche im Steckplatz 1 des DAQ NI PXI-1033 steckt, ist anfangs gebündelt und wird mittels Index Array VI in das Referenzsignal und das Mikrofonsignal separiert.
-Aus den beiden Signalen lässt sich mittels Frequency Response VI die Übertragungsfunktion, sowie die zugehörige Kohärenz berechnen. 
-Die zugehörigen komplexen Spektren werden als $X[k]$, Referenzsignal und $Y[k]$, Mikrofonsignal bezeichnet.
-Für die Übertragungsfunktion wird der $H_1$-Schätzer verwendet. Dieser basiert auf dem Kreuzspektrum zwischen Eingangs- und Ausgangssignal sowie dem Autospektrum des Eingangssignals und minimiert den Einfluss von Störungen am Ausgangssignal:
-
-\begin{equation}
-H_1(k) = \frac{G_{xy}(k)}{G_{xx}(k)}
-\end{equation}
-
-wobei $H_1[k]$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}[k]$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}[k]$ das Autospektrum des Referenzsignals ist.
+Aus den beiden Signalen lässt sich mittels Frequency Response VI die Übertragungsfunktion, sowie die zugehörige Kohärenz berechnen. Die zugehörigen komplexen Spektren werden als $X(k)$ (Referenzsignal) und $Y(k)$ (Mikrofonsignal) bezeichnet. Die mathematische Beschreibung der Übertragungsfunktion über den $H_1$-Schätzer sowie der Kohärenz erfolgt in den nachfolgenden Abschnitten.
 
 Der FRF-Graph beschreibt die relative frequenzabhängige Systemantwort des gesamten Aufbaus aus Verstärker, Exciter, DML-Platte und Schallabstrahlung. Der FRF-Graph dient insbesondere der Beurteilung von Resonanzen, Einbrüchen und der relativen Linearität des Systems, dabei ist dieser immer unter Berücksichtigung der Kohärenz zu betrachten. Die Kohärenz gibt an wie gut das Eingangssignal das Ausgangssignal widerspiegelt. Die Kohärenz wird in einem Wertebereich von 0 bis 1 angezeigt. Werte nahe 1 zeigen, dass das Ausgangssignal der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird.
 
@@ -674,7 +667,12 @@ Dafür wird das Signal mittels Fast Fourier Transformation (kurz FFT) VI in den 
 \bar{A}(k) = \frac{1}{M} \cdot \sum_{i=1}^{M} A_i(k)
 \end{equation}
 
-wobei $\bar{A}(k)$ das gemittelte lineare Amplitudenspektrum, $M$ die Anzahl der Mittelungen und $A_i(k)$ das lineare Amplitudenspektrum des $i$-ten Datenblocks ist.
+\begin{itemize}
+    \item $\bar{A}(k)$ : gemitteltes lineares Amplitudenspektrum in Pa
+    \item $A_i(k)$ : lineares Amplitudenspektrum des $i$-ten Datenblocks in Pa
+    \item $M$ : Anzahl der Mittelungen
+    \item $k$ : Frequenzindex
+\end{itemize}
 
 Die Darstellung des Schalldruckpegels über der Frequenz erfolgt anschließend in dB SPL. Dazu wird das gemittelte lineare Spektrum auf den Bezugsdruck $p_0 = 20\;\mu\mathrm{Pa}$ normiert:
 
@@ -682,7 +680,12 @@ Die Darstellung des Schalldruckpegels über der Frequenz erfolgt anschließend i
 L_p(k) = 20 \cdot \log_{10}\left(\frac{\bar{A}(k)}{p_0}\right)
 \end{equation}
 
-wobei $L_p[k]$ der Schalldruckpegel in dB SPL, $\bar{A}[k]$ das gemittelte lineare Amplitudenspektrum in Pa und $p_0 = 20 \cdot 10^{-6}\;\mathrm{Pa}$ der Bezugsdruck ist.
+\begin{itemize}
+    \item $L_p(k)$ : Schalldruckpegel in dB SPL
+    \item $\bar{A}(k)$ : gemitteltes lineares Amplitudenspektrum in Pa
+    \item $p_0$ : Bezugsdruck $p_0 = 20 \cdot 10^{-6}$ Pa
+    \item $k$ : Frequenzindex
+\end{itemize}
 
 Setzt man den Bezugsdruck explizit ein, ergibt sich:
 
@@ -698,7 +701,12 @@ Zur robusten Schätzung der Übertragungsfunktion wird der $H_1$-Schätzer verwe
 H_1(k) = \frac{G_{xy}(k)}{G_{xx}(k)}
 \end{equation}
 
-wobei $H_1(k)$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}(k)$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}(k)$ das Autospektrum des Referenzsignals ist.
+\begin{itemize}
+    \item $H_1(k)$ : $H_1$-Schätzer der Übertragungsfunktion
+    \item $G_{xy}(k)$ : Kreuzspektrum zwischen Referenz- und Antwortsignal
+    \item $G_{xx}(k)$ : Autospektrum des Referenzsignals
+    \item $k$ : Frequenzindex
+\end{itemize}
 
 Dabei berechnen sich die gemittelten Spektren über $M$ Blöcke zu:
 
@@ -707,28 +715,46 @@ G_{xy}(k) = \frac{1}{M} \cdot \sum_{i=1}^{M} X_i^*(k) \cdot Y_i(k)
 \end{equation}
 
 \begin{equation}
-G_{xx}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} |X_i[k]|^2
+G_{xx}(k) = \frac{1}{M} \cdot \sum_{i=1}^{M} |X_i(k)|^2
 \end{equation}
 
-wobei $X_i^*[k]$ das konjugiert komplexe Spektrum des Referenzsignals im $i$-ten Block, $Y_i[k]$ das komplexe Spektrum des Antwortsignals im $i$-ten Block und $M$ die Anzahl der gemittelten Blöcke ist.
+\begin{itemize}
+    \item $G_{xy}(k)$ : gemitteltes Kreuzspektrum zwischen Referenz- und Antwortsignal
+    \item $G_{xx}(k)$ : gemitteltes Autospektrum des Referenzsignals
+    \item $X_i(k)$ : komplexes Spektrum des Referenzsignals im $i$-ten Block
+    \item $X_i^*(k)$ : konjugiert komplexes Spektrum des Referenzsignals im $i$-ten Block
+    \item $Y_i(k)$ : komplexes Spektrum des Antwortsignals im $i$-ten Block
+    \item $M$ : Anzahl der gemittelten Blöcke
+    \item $k$ : Frequenzindex
+\end{itemize}
 
 Zur Darstellung des Betrags der Übertragungsfunktion in Dezibel wird verwendet:
 
 \begin{equation}
-H_{\mathrm{dB}}[k] = 20 \cdot \log_{10}\left(|H_1[k]|\right)
+H_{\mathrm{dB}}(k) = 20 \cdot \log_{10}\left(|H_1(k)|\right)
 \end{equation}
 
-wobei $H_{\mathrm{dB}}[k]$ der Betrag der Übertragungsfunktion in dB und $|H_1[k]|$ der Betrag des $H_1$-Schätzers ist.
+\begin{itemize}
+    \item $H_{\mathrm{dB}}(k)$ : Betrag der Übertragungsfunktion in dB
+    \item $|H_1(k)|$ : Betrag des $H_1$-Schätzers
+    \item $k$ : Frequenzindex
+\end{itemize}
 
 Der FRF-Graph beschreibt somit die relative frequenzabhängige Systemantwort des gesamten Aufbaus aus Verstärker, Exciter, DML-Platte und Schallabstrahlung. Im Gegensatz dazu zeigt der SPL-Graph den absoluten Schalldruckpegel am Mikrofon über der Frequenz. Während der SPL-Graph vor allem zur Bewertung der tatsächlich erreichten Lautstärke und des nutzbaren Übertragungsbereichs geeignet ist, dient der FRF-Graph insbesondere der Beurteilung von Resonanzen, Einbrüchen und der relativen Linearität des Systems.
 
 Zur qualitativen Beurteilung der Messgüte wird zusätzlich die Kohärenz zwischen Referenz- und Antwortsignal berechnet. Die Kohärenzfunktion gibt an, in welchem Maß das Ausgangssignal linear mit dem Eingangssignal zusammenhängt. Sie ergibt sich aus den gemittelten Auto- und Kreuzspektren zu:
 
 \begin{equation}
-\gamma^2[k] = \frac{|G_{xy}[k]|^2}{G_{xx}[k] \cdot G_{yy}[k]}
+\gamma^2(k) = \frac{|G_{xy}(k)|^2}{G_{xx}(k) \cdot G_{yy}(k)}
 \end{equation}
 
-wobei $\gamma^2[k]$ die Kohärenzfunktion (Wertebereich 0 bis 1), $G_{xy}[k]$ das Kreuzspektrum zwischen Eingangs- und Ausgangssignal, $G_{xx}[k]$ das Autospektrum des Referenzsignals und $G_{yy}[k]$ das Autospektrum des Antwortsignals ist.
+\begin{itemize}
+    \item $\gamma^2(k)$ : Kohärenzfunktion (Wertebereich 0 bis 1)
+    \item $G_{xy}(k)$ : Kreuzspektrum zwischen Eingangs- und Ausgangssignal
+    \item $G_{xx}(k)$ : Autospektrum des Referenzsignals
+    \item $G_{yy}(k)$ : Autospektrum des Antwortsignals
+    \item $k$ : Frequenzindex
+\end{itemize}
 
 Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird. Werte deutlich unter 1 deuten auf nichtlineare Effekte, Störgeräusche oder eine unzureichende Anregung bei der betreffenden Frequenz hin.
 
@@ -750,7 +776,7 @@ Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften d
 
 Die Abbildung \ref{fig:messaufbau_freifeldraum} zeigt den Versuchsaufbau im Freifeldraum, der DML-Lautsprecher wurde dabei freihängend aufgehängt und das Messmikrofon mit einem Arm von der Decke auf einem Meter Abstand fest montiert.
 
-Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers. Für diesen Aufbau wurde die Position des Messmikrofons nicht verändert. Die Platte verwendete Platte wurde mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre angebracht, welche am Boden an einer Wasserwaage befestigt sind. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt.
+Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers. Für diesen Aufbau wurde die Position des Messmikrofons nicht verändert. Die Platte verwendete Platte wurde mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre angebracht, welche am Boden an einer Wasserwaage befestigt sind. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt. 
 
 \begin{figure}[H]
 	\centering
@@ -1105,7 +1131,7 @@ Im Mittenbereich (400--1500\,Hz) zeigt die Skript-Position beider Plattengröße
 
 Im Hochtonbereich (oberhalb 5\,kHz) zeigen alle DML-Konfigurationen einen deutlichen Pegelabfall auf 35--50\,dB, bleiben aber durchgehend über der Bose-Referenz (20--30\,dB). Die charakteristischen Schwankungen und Einbrüche sind bei den DML-Systemen weniger ausgeprägt als beim konventionellen Lautsprecher, was auf die breitbandige Abstrahlung der Biegewellenplatten zurückzuführen ist.
 
-Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenüber der Hersteller-Position für beide Plattengrößen, wobei die 70$\times$44\,cm Platte mit Skript-Position einen besonders ausgewogenen Frequenzverlauf aufweist.
+Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenüber der Hersteller-Position für beide Plattengrößen, wobei die 70$\times$44\,cm Platte mit Skript-Position einen besonders ausgewogenen Frequenzverlauf aufweist. Zudem gib es aktive störquellen wie lüftergeräusche des PC und DAQ im Freifeldraum welche einfluss auf die Messergebnisse haben.
 
 
 \clearpage
@@ -1114,14 +1140,12 @@ Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenü
 
 Die Ergebnissse der Simulation sowie der Versuchsaufbauten zeigen trotz vereinfachterannahmen ein Positives ergebnis. Dabei ist zu erkennen das die Simulierten Positionen Trotz Monolitischer Simulation eine höheren Schalldruckpegel erreichen als die vom Herteller verwendeten universal Positionen. Dennoch sind einige aspekte zu beachten welche die ergebnisse Beeinflusst haben können. 
 
-Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per Augenmaß und Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
+Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per grober Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
  
 Der Messabstand von \SI{1}{\metre} erfüllt die Fernfeldbedingung $r > 2D^2/\lambda$ nur bis etwa \SI{4}{\kilo\hertz}. Für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ ergibt sich bei \SI{4}{\kilo\hertz} ein Mindestabstand von ca.\ \SI{1{,}14}{\metre}. Die Messungen bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} befinden sich somit im geometrischen Nahfeld der Platte, was die gemessene Richtcharakteristik gegenüber der tatsächlichen Fernfeldabstrahlung verzerren kann.
  
 Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden und ein Verbrennungsmotor auf einem Gestell wie in Abbildung~\ref{fig:messaufbau_freifeldraum} zu erkennen ist. Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen. 
  
-Die untere Grenzfrequenz des Freifeldraums begrenzt zudem die Gültigkeit der Messungen im Tieftonbereich. Bei \SI{63}{\hertz} ist davon auszugehen, dass die Absorberkeile nicht mehr vollständig wirksam sind und Raumreflexionen das Messergebnis beeinflussen.
-
 Zudem kann durch eine Messunsicherheit des DAQ sowie des verwendeten Messsmikrofons eine verfälschung des Graphen entstehen. Unterberücksichtigung dieser möglichen Messungenauigkeiten kann dennoch davon ausgegangen werden das die SPL Messung aussagekräftig ist da diese die Klassischen Charakteristiken von DML Lautsprechern aufzeigt. 
 
 

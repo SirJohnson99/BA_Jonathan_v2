@@ -25,3 +25,15 @@
 *.tmp
 *.bak
 *~
+
+# LaTeX Index-Build-Dateien
+*.ilg
+*.ind
+*.idx
+*.bcf-SAVE-ERROR
+*.bbl-SAVE-ERROR
+*.synctex(busy)
+
+# macOS / Editor
+.DS_Store
+.claude/

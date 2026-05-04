@@ -9,12 +9,12 @@ Auf Grundlage der Versuchsergebnisse aus Kapitel 3 werden die Exciter an den sim
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{chapters/Anhang/70x44_DML_TZ.pdf}
+	\includegraphics[width=0.8\textwidth]{chapters/Anhang/Sim_70x44_TZ.pdf}
 	\caption{Exciterpositionen auf den DML-Platten}
 	\label{fig:exciterposition}
 \end{figure}
 
-Abbildung \ref{fig:exciterposition} zeigt die verwendeten Exciter-Positionen. Die bereits im Versuchsaufbau verwendeten Exciter werden wiederverwendet, aus diesem Grund muss die Klebefläche erneuert werden. Dazu wird die Kontaktfläche zunächst vom alten Kleber gereinigt und anschließend mit doppelseitigem Tesa-Klebeband neu beschichtet, siehe Anhang K. Die Lautsprecherkabel, Anhang L, werden an den Excitern in Reihenschaltung verlötet, um die gewünschte Gesamtimpedanz von 8\,$\Omega$ zu erreichen, als brückenkabel wird hierbei ein 0,75 $mm^2$ Kabel verwendet. Beide Vorbereitungsschritte sind in Abbildung \ref{fig:klebeschicht_reihenschaltung} dargestellt.
+Abbildung \ref{fig:exciterposition} zeigt die verwendeten Exciter-Positionen. Die bereits im Versuchsaufbau verwendeten Exciter werden wiederverwendet, aus diesem Grund muss die Klebefläche erneuert werden. Dazu wird die Kontaktfläche zunächst vom alten Kleber gereinigt und anschließend mit doppelseitigem Tesa-Klebeband neu beschichtet, siehe Anhang K. Die Lautsprecherkabel, Anhang L, werden an den Excitern in Reihenschaltung verlötet, um die gewünschte Gesamtimpedanz von 8\,$\Omega$ zu erreichen, als brückenkabel wird hierbei ein 1x 1$mm^2$ Kabel verwendet. Beide Vorbereitungsschritte sind in Abbildung \ref{fig:klebeschicht_reihenschaltung} dargestellt.
 
 \begin{figure}[H]
 	\centering
@@ -73,33 +73,33 @@ Abbildung \ref{fig:equalizer_einstellungen} zeigt die am Equalizer vorgenommenen
 \centering
 \caption{Equalizer-Einstellungen des DML-Lautsprechers}
 \label{tab:equalizer_einstellungen}
-\begin{tabularx}{\textwidth}{|l|l|X|}
+\begin{tabularx}{\textwidth}{|c|c|X|}
 \hline
 \textbf{Frequenz} & \textbf{Einstellung L/R} & \textbf{Bewertung} \\
 \hline
-\SI{32}{\hertz}   & ca.\ +\SI{6}{\deci\bel}       & Deutliche Bassanhebung \\
+\SI{32}{\hertz}   & \+\SI{6}{\deci\bel}       & Deutliche Bassanhebung \\
 \hline
-\SI{63}{\hertz}   & ca.\ +\SI{4}{\deci\bel}       & Bassbereich angehoben \\
+\SI{63}{\hertz}   & \+\SI{4}{\deci\bel}       & Bassbereich angehoben \\
 \hline
-\SI{125}{\hertz}  & ca.\ +\SI{3}{\deci\bel}       & Grundton leicht angehoben \\
+\SI{125}{\hertz}  & \+\SI{3}{\deci\bel}       & Grundton leicht angehoben \\
 \hline
-\SI{250}{\hertz}  & ca.\ +\SI{2}{\deci\bel}       & Untere Mitten moderat angehoben \\
+\SI{250}{\hertz}  & \+\SI{2}{\deci\bel}       & Untere Mitten moderat angehoben \\
 \hline
-\SI{500}{\hertz}  & ca.\ +\SI{2}{\deci\bel}       & Mitten leicht angehoben \\
+\SI{500}{\hertz}  & \+\SI{2}{\deci\bel}       & Mitten leicht angehoben \\
 \hline
-\SI{1}{\kilo\hertz}   & ca.\ +\SIrange{2}{3}{\deci\bel} & Präsenzbereich leicht angehoben \\
+\SI{1}{\kilo\hertz}   & \+\SI{2}{\deci\bel} 	& Präsenzbereich leicht angehoben \\
 \hline
-\SI{2}{\kilo\hertz}   & ca.\ +\SI{3}{\deci\bel}       & Sprach- und Präsenzbereich angehoben \\
+\SI{2}{\kilo\hertz}   & \+\SI{3}{\deci\bel}       & Sprach- und Präsenzbereich angehoben \\
 \hline
-\SI{4}{\kilo\hertz}   & ca.\ +\SI{3}{\deci\bel}       & Obere Mitten und Präsenz angehoben \\
+\SI{4}{\kilo\hertz}   & \+\SI{3}{\deci\bel}       & Obere Mitten und Präsenz angehoben \\
 \hline
-\SI{8}{\kilo\hertz}   & ca.\ +\SI{5}{\deci\bel}       & Hochton deutlich angehoben \\
+\SI{8}{\kilo\hertz}   & \+\SI{5}{\deci\bel}       & Hochton deutlich angehoben \\
 \hline
-\SI{16}{\kilo\hertz}  & ca.\ +\SI{6}{\deci\bel}       & Brillanzbereich stark angehoben \\
+\SI{16}{\kilo\hertz}  & \+\SI{6}{\deci\bel}       & Brillanzbereich stark angehoben \\
 \hline
 \end{tabularx}
 \end{table}
-
+ 
 Die in Tabelle \ref{tab:equalizer_einstellungen} dargestellte Entzerrung zeigt eine breitbandige Anhebung über fast den gesamten Frequenzbereich, mit besonders deutlicher Betonung im Tiefbass und Hochtonbereich. Für einen DML-Lautsprecher ist das plausibel, da solche Systeme häufig im unteren Frequenzbereich weniger effizient arbeiten und im Hochtonbereich eine zusätzliche Anhebung genutzt wird, um mehr Brillanz und subjektive Klarheit zu erzeugen.
 
 Die starke Anhebung bei \SI{32}{\hertz} und \SI{63}{\hertz} kann subjektiv mehr Fülle erzeugen, ist aber bei DML-Systemen kritisch zu bewerten, da diese tiefen Frequenzen durch die begrenzte Plattengröße und den Exciterhub oft nur eingeschränkt wiedergegeben werden können. Dadurch können Verzerrungen oder eine stärkere Belastung des Exciters auftreten. Die Hochtonanhebung bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} kann den Klang offener wirken lassen, sollte aber messtechnisch überprüft werden, da sie sonst schnell zu einer überbetonten oder scharfen Wiedergabe führen kann.
@@ -111,7 +111,7 @@ Die Bewertung des fertig installierten DML-Systems muss unter Berücksichtigung 
 
 Die am Equalizer vorgenommenen Einstellungen verdeutlichen die Grenzen des Systems. Die starke Anhebung im Tieftonbereich bei \SI{32}{\hertz} und \SI{63}{\hertz} um bis zu \SI{6}{\deci\bel} zeigt, dass das DML-System in diesem Frequenzbereich von sich aus nur eingeschränkt leistungsfähig ist. Dies entspricht den theoretischen Erwartungen, da die begrenzte Plattengröße und der geringe Exciterhub die Wiedergabe tiefer Frequenzen physikalisch limitieren. Die elektronische Kompensation durch den Equalizer kann diesen Mangel zwar subjektiv mildern, führt jedoch zu einer erhöhten mechanischen und elektrischen Belastung der Exciter. Bei hohen Pegeln besteht dadurch die Gefahr von Verzerrungen oder einer vorzeitigen Ermüdung der Antriebseinheit.
 
-Ebenso kritisch ist die starke Hochtonanhebung bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} zu bewerten. Obwohl diese Einstellung subjektiv zu einem offeneren und brillanteren Klangbild führte, kann eine derart ausgeprägte Betonung der hohen Frequenzen bei längerer Hördauer als anstrengend oder scharf empfunden werden. Ohne messtechnische Überprüfung bleibt unklar, ob diese Anhebung tatsächlich notwendig war oder ob sie lediglich Raumakustikeffekte oder individuelle Hörpräferenzen kompensiert.
+Ebenso kritisch ist die starke Hochtonanhebung bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} zu bewerten. Obwohl diese Einstellung subjektiv zu einem offeneren Klangbild führte, kann eine derart ausgeprägte Betonung der hohen Frequenzen bei längerer Hördauer als anstrengend oder scharf empfunden werden. Ohne messtechnische Überprüfung bleibt unklar, ob diese Anhebung tatsächlich notwendig war oder ob sie lediglich Raumakustikeffekte oder individuelle Hörpräferenzen kompensiert.
 
 Positiv hervorzuheben ist die breite und diffuse Schallabstrahlung des DML-Systems. Im Vergleich zu konventionellen Lautsprechern mit gerichteter Abstrahlung erzeugt das DML-Panel ein gleichmäßigeres Schallfeld im Raum. Dieser Effekt wurde bei der subjektiven Bewertung als angenehm empfunden und eignet sich besonders für Anwendungen, bei denen eine Hintergrundbeschallung ohne ausgeprägte Lokalisation gewünscht ist.
 
