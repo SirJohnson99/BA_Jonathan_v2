@@ -462,48 +462,49 @@ Die Abbildung \ref{fig:modellaufbau} zeigt den Modellaufbau der Platte, zu sehen
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
 
-Die berechneten Eigenmoden der Platten bilden Muster, welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen zeigen die Muster der simulierten Eigenmoden um die Frequenzen bei \SI{50}{\hertz}, \SI{150}{\hertz}, \SI{300}{\hertz}, \SI{500}{\hertz}, \SI{800}{\hertz} und \SI{1000}{\hertz} an.  
+Die berechneten Eigenmoden der Platten bilden Muster, welche die Verschiebung der Platte bei den Eigenfrequenzen zeigen. Die Abbildungen \ref{fig:eigenmoden_07m} \ref{fig:eigenmoden_1m} zeigen die Muster der simulierten Eigenmoden im bereich der Frequenzen bei \SI{50}{\hertz}, \SI{150}{\hertz}, \SI{300}{\hertz}, \SI{500}{\hertz}, \SI{800}{\hertz} und \SI{1000}{\hertz} an.  
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Eigenmoden_0.7m.png}
+	\includegraphics[angle=270,width=0.8\textwidth]{pictures/Eigenmoden_0.7m.png}
 	\caption{Eigenmoden der KAPA Line Platte (\SI{0,7}{\meter} $\times$ \SI{0,44}{\meter})}
 	\label{fig:eigenmoden_07m}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pictures/Eigenmoden_1m.png}
+	\includegraphics[angle=270,width=0.8\textwidth]{pictures/Eigenmoden_1m.png}
 	\caption{Eigenmoden der KAPA Line Platte (\SI{1}{\meter} $\times$ \SI{0,7}{\meter})}
 	\label{fig:eigenmoden_1m}
 \end{figure}
 
-Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eigenmoden_1m} auf der rechten Seite zu sehen ist, zeigt an, dass die dunklen violetten Bereiche eine größere Verschiebung aufweisen. Je heller die Platte, desto weniger Verschiebung. 
+Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eigenmoden_1m} zu sehen ist, zeigt an, dass die dunklen violetten Bereiche eine größere Verschiebung aufweisen. Je heller die Platte, desto weniger Verschiebung. 
 
 Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. Das Skript berechnet für jede mögliche Kombination aus zwei Exciter-Positionen einen Score-Wert, der die Güte der Modenanregung quantifiziert. Die zehn besten Positionspaare werden tabellarisch ausgegeben, wobei neben dem Score auch die prozentuale Modenabdeckung und der minimale Abstand zwischen den Excitern angegeben werden.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/Skript_100x70.png}
-	\caption{Konsolenausgabe des Python-Skripts mit den Top-10 Exciter-Positionspaaren für die 100 $\times$ 70\,cm Platte. Die optimalen Koordinaten werden sowohl relativ zur Plattenmitte als auch zur Plattenecke angegeben.}
+	\caption{Ergebnisse Python-Skript mit den Top-10 Exciter-Positionspaaren für die 100 $\times$ 70\,cm Platte.}
 	\label{fig:skript_100x70}
 \end{figure}
 
-Abbildung \ref{fig:skript_100x70} zeigt die Konsolenausgabe des Auswertungsskripts für die große Platte. Die ermittelten optimalen Positionen liegen bei Exciter~1: $x = 50{,}0$\,mm, $z = 382{,}8$\,mm und Exciter~2: $x = 875{,}0$\,mm, $z = 65{,}6$\,mm (relativ zur linken unteren Ecke).
+Abbildung \ref{fig:skript_100x70} zeigt die Konsolenausgabe des Auswertungsskripts für die größere Platte. Die ermittelten optimalen Positionen liegen bei Exciter~1: $x = 50{,}0$\,mm, $z = 382{,}8$\,mm und Exciter~2: $x = 875{,}0$\,mm, $z = 65{,}6$\,mm (relativ zur linken unteren Ecke).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/Skript_ergebnis_100x70.png}
-	\caption{Visualisierung der Skript-Ergebnisse für die 100 $\times$ 70\,cm Platte. Links: Score-Heatmap für Exciter~2 bei fixierter Position von Exciter~1. Rechts: Plattenansicht mit markierten Exciter-Positionen und mittlerer Modenaktivität.}
+	\caption{Visualisierung der Skript-Ergebnisse für die 100 $\times$ 70\,cm Platte.}
 	\label{fig:skript_ergebnis_100x70}
 \end{figure}
 
-In Abbildung \ref{fig:skript_ergebnis_100x70} ist links die Score-Heatmap dargestellt, wobei helle Bereiche (hoher Score) günstige Positionen für Exciter~2 anzeigen. Die dunklen Bereiche kennzeichnen Knotenlinien der Eigenmoden, an denen eine Anregung vermieden werden sollte. Rechts ist die mittlere Modenaktivität über alle betrachteten Frequenzen dargestellt, wobei dunkle Bereiche eine geringe Verschiebung und somit geeignete Exciter-Positionen markieren.
+In Abbildung \ref{fig:skript_ergebnis_100x70} ist links die Score-Heatmap dargestellt, wobei helle Bereiche für einen hoher Score und eine günstige Positionen für Exciter~2 anzeigen. Die dunklen Bereiche kennzeichnen Knotenlinien der Eigenmoden, an denen eine Anregung vermieden werden sollte. 
+Rechts ist die mittlere Modenaktivität über alle betrachteten Frequenzen dargestellt, wobei dunkle Bereiche eine geringe Verschiebung und somit geeignete Exciter-Positionen markieren.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{pictures/Skript_70x44.png}
-	\caption{Konsolenausgabe des Python-Skripts mit den Top-10 Exciter-Positionspaaren für die 70 $\times$ 44\,cm Platte.}
+	\caption{Ergebnisse Python-Skript mit den Top-10 Exciter-Positionspaaren für die 70 $\times$ 44\,cm Platte.}
 	\label{fig:skript_70x44}
 \end{figure}
 
@@ -512,11 +513,11 @@ Für die kleinere 70 $\times$ 44\,cm Platte (Abbildung \ref{fig:skript_70x44}) e
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/Skript_ergebni_70x44.png}
-	\caption{Visualisierung der Skript-Ergebnisse für die 70 $\times$ 44\,cm Platte. Links: Score-Heatmap für Exciter~2. Rechts: Plattenansicht mit optimalen Exciter-Positionen und Modenaktivität.}
+	\caption{Visualisierung der Skript-Ergebnisse für die 70 $\times$ 44\,cm Platte.}
 	\label{fig:skript_ergebnis_70x44}
 \end{figure}
 
-Die Ergebnisse der Heatmap-Analyse für die kleinere Platte (Abbildung \ref{fig:skript_ergebnis_70x44}) zeigen ein charakteristisches Kreuzungsmuster der Knotenlinien in der Plattenmitte, welches bei der Exciter-Positionierung vermieden wurde. Die ermittelten Positionen liegen asymmetrisch zur Plattenmitte und ermöglichen eine breite Anregung der Plattenmoden.
+Die Ergebnisse der Heatmap-Analyse für die kleinere Platte, Abbildung \ref{fig:skript_ergebnis_70x44} zeigen ein charakteristisches Kreuzungsmuster der Knotenlinien in der Plattenmitte, welches bei der Exciter-Positionierung vermieden wurde. Die ermittelten Positionen liegen asymmetrisch zur Plattenmitte und ermöglichen eine breite Anregung der Plattenmoden.
 
 
 
@@ -529,6 +530,7 @@ Der Versuchsaufbau verfolgt hierbei zwei primäre Ziele, die Erfassung des Frequ
 
  
 \subsection{LabVIEW}
+
 LabVIEW ist ein Programm der Firma National Instruments, mit dem sich in einer grafischen Entwicklungsumgebung Mess-, Steuer-, Regel- und Automatisierungssysteme programmieren lassen. Statt textbasiertem Code verwendet LabVIEW Blockdiagramme zur Datenverarbeitung
 Für die Vermessung der akustischen Eigenschaften des DML-Lautsprechers und dessen Beurteilung muss das in LabVIEW geschriebene Programm die folgenden Funktionen umfassen: 
 
@@ -582,7 +584,7 @@ Wobei $\Delta f$ die Frequenzauflösung des Spektrums in Hz, $f_s$ die Abtastfre
 
 
 
-Abbildung Whileschleife.PNG
+\textbf{Abbildung Whileschleife.PNG}
 
 
 In der Whileschleife wird das weiße Rauschen erzeugt, die Eingangssignale erfasst und verarbeitet sowie grafisch dargestellt. 
@@ -595,10 +597,11 @@ Die zugehörigen komplexen Spektren werden als $X[k]$, Referenzsignal und $Y[k]$
 Für die Übertragungsfunktion wird der $H_1$-Schätzer verwendet. Dieser basiert auf dem Kreuzspektrum zwischen Eingangs- und Ausgangssignal sowie dem Autospektrum des Eingangssignals und minimiert den Einfluss von Störungen am Ausgangssignal:
 
 \begin{equation}
-H_1[k] = \frac{G_{xy}[k]}{G_{xx}[k]}
+H_1(k) = \frac{G_{xy}(k)}{G_{xx}(k)}
 \end{equation}
 
 wobei $H_1[k]$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}[k]$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}[k]$ das Autospektrum des Referenzsignals ist.
+
 Der FRF-Graph beschreibt die relative frequenzabhängige Systemantwort des gesamten Aufbaus aus Verstärker, Exciter, DML-Platte und Schallabstrahlung. Der FRF-Graph dient insbesondere der Beurteilung von Resonanzen, Einbrüchen und der relativen Linearität des Systems, dabei ist dieser immer unter Berücksichtigung der Kohärenz zu betrachten. Die Kohärenz gibt an wie gut das Eingangssignal das Ausgangssignal widerspiegelt. Die Kohärenz wird in einem Wertebereich von 0 bis 1 angezeigt. Werte nahe 1 zeigen, dass das Ausgangssignal der jeweiligen Frequenz vollständig durch das Eingangssignal erklärt wird.
 
 
@@ -668,15 +671,15 @@ Dafür wird das Signal mittels Fast Fourier Transformation (kurz FFT) VI in den 
 %Da bei der Messung eine Mittelung über mehrere Datenblöcke durchgeführt wird, werden zunächst die linearen Amplitudenspektren aufsummiert und anschließend gemittelt. Für $M$ Mittelungen ergibt sich:
 
 \begin{equation}
-\bar{A}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} A_i[k]
+\bar{A}(k) = \frac{1}{M} \cdot \sum_{i=1}^{M} A_i(k)
 \end{equation}
 
-wobei $\bar{A}[k]$ das gemittelte lineare Amplitudenspektrum, $M$ die Anzahl der Mittelungen und $A_i[k]$ das lineare Amplitudenspektrum des $i$-ten Datenblocks ist.
+wobei $\bar{A}(k)$ das gemittelte lineare Amplitudenspektrum, $M$ die Anzahl der Mittelungen und $A_i(k)$ das lineare Amplitudenspektrum des $i$-ten Datenblocks ist.
 
 Die Darstellung des Schalldruckpegels über der Frequenz erfolgt anschließend in dB SPL. Dazu wird das gemittelte lineare Spektrum auf den Bezugsdruck $p_0 = 20\;\mu\mathrm{Pa}$ normiert:
 
 \begin{equation}
-L_p[k] = 20 \cdot \log_{10}\left(\frac{\bar{A}[k]}{p_0}\right)
+L_p(k) = 20 \cdot \log_{10}\left(\frac{\bar{A}(k)}{p_0}\right)
 \end{equation}
 
 wobei $L_p[k]$ der Schalldruckpegel in dB SPL, $\bar{A}[k]$ das gemittelte lineare Amplitudenspektrum in Pa und $p_0 = 20 \cdot 10^{-6}\;\mathrm{Pa}$ der Bezugsdruck ist.
@@ -684,23 +687,23 @@ wobei $L_p[k]$ der Schalldruckpegel in dB SPL, $\bar{A}[k]$ das gemittelte linea
 Setzt man den Bezugsdruck explizit ein, ergibt sich:
 
 \begin{equation}
-L_p[k] = 20 \cdot \log_{10}\left(\frac{\bar{A}[k]}{20 \cdot 10^{-6}}\right)
+L_p(k) = 20 \cdot \log_{10}\left(\frac{\bar{A}(k)}{20 \cdot 10^{-6}}\right)
 \end{equation}
 
-Parallel zur SPL-Berechnung wird aus Referenzsignal und akustischer Antwort die Übertragungsfunktion des Systems bestimmt. Dazu werden das Referenzsignal $x_{\mathrm{ref}}[n]$ sowie das Schalldrucksignal $p[n]$ ebenfalls gefenstert und in den Frequenzbereich transformiert. Die zugehörigen komplexen Spektren werden als $X[k]$ (Referenz) und $Y[k]$ (Antwort) bezeichnet.
+Parallel zur SPL-Berechnung wird aus Referenzsignal und akustischer Antwort die Übertragungsfunktion des Systems bestimmt. Dazu werden das Referenzsignal $x_{\mathrm{ref}}(n)$ sowie das Schalldrucksignal $p(n)$ ebenfalls gefenstert und in den Frequenzbereich transformiert. Die zugehörigen komplexen Spektren werden als $X(k)$ (Referenz) und $Y(k)$ (Antwort) bezeichnet.
 
 Zur robusten Schätzung der Übertragungsfunktion wird der $H_1$-Schätzer verwendet. Dieser basiert auf dem Kreuzspektrum zwischen Eingangs- und Ausgangssignal sowie dem Autospektrum des Eingangssignals und minimiert den Einfluss von Störungen am Ausgangssignal:
 
 \begin{equation}
-H_1[k] = \frac{G_{xy}[k]}{G_{xx}[k]}
+H_1(k) = \frac{G_{xy}(k)}{G_{xx}(k)}
 \end{equation}
 
-wobei $H_1[k]$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}[k]$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}[k]$ das Autospektrum des Referenzsignals ist.
+wobei $H_1(k)$ der $H_1$-Schätzer der Übertragungsfunktion, $G_{xy}(k)$ das Kreuzspektrum zwischen Referenz- und Antwortsignal und $G_{xx}(k)$ das Autospektrum des Referenzsignals ist.
 
 Dabei berechnen sich die gemittelten Spektren über $M$ Blöcke zu:
 
 \begin{equation}
-G_{xy}[k] = \frac{1}{M} \cdot \sum_{i=1}^{M} X_i^*[k] \cdot Y_i[k]
+G_{xy}(k) = \frac{1}{M} \cdot \sum_{i=1}^{M} X_i^*(k) \cdot Y_i(k)
 \end{equation}
 
 \begin{equation}
@@ -732,10 +735,11 @@ Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Fr
 \clearpage
 
  \subsection{Durchführung der Messungen}
- 
- Um die durchgeführten Messungen vergleichen zu können, wurden während des gesamten Versuchsaufbaus die Einstellungen des Equalizers und des Audioverstärkers nicht geändert. Die genauen Einstellungen können dem Anhang XY entnommen werden, der Equalizer hat während der Messungen keine Signalanpassung vorgenommen.
 
-Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden zwei verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Bei den Plattengrößen handelt es sich um das Herstellermaß von 100 $\times$ 70\,cm und um das mit dem angepassten Seitenverhältnis von 70 $\times$ 44\,cm. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter. Die exakten Exciterpositionen können den technischen Zeichnungen aus Anhang G-J entnommen werden. Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert.
+ In dieser Arbeit wurden zu untersuchung der Akustischen eigenschaften des DML zwei versuchsaufbauten durchgeführt.
+ Um die durchgeführten Messungen vergleichen zu können, wurden während des gesamten Versuchsaufbaus die Einstellungen des Equalizers und des Audioverstärkers nicht geändert. Der Gain des Equalizers wurde auf 5 und die Lautstärke der  Stereoanlage auf 10 eingestellt, der Equalizer hat während der Messungen keine Signalanpassung vorgenommen. Die Temperatur sowie die Luftfeuchtigkeit waren währen der Messungen geich bei 21 Grad C und 25 \% Luftfeuchtigkeit.
+
+Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden zwei verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Bei den Plattengrößen handelt es sich um das Herstellermaß von 100 $\times$ 70\,cm und um das mit dem angepassten Seitenverhältnis von 70 $\times$ 44\,cm. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter. Die exakten Exciterpositionen können den technischen Zeichnungen aus Anhang G-J entnommen werden. Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert. 
 
 \begin{figure}[H]
 	\centering
@@ -746,7 +750,7 @@ Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften d
 
 Die Abbildung \ref{fig:messaufbau_freifeldraum} zeigt den Versuchsaufbau im Freifeldraum, der DML-Lautsprecher wurde dabei freihängend aufgehängt und das Messmikrofon mit einem Arm von der Decke auf einem Meter Abstand fest montiert.
 
-Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers. Für diesen Aufbau wurde die Position des Messmikrofons nicht verändert. Die Platte wurde mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre angebracht, welche am Boden an einer Wasserwaage befestigt sind. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt.
+Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallfeldes des Lautsprechers. Für diesen Aufbau wurde die Position des Messmikrofons nicht verändert. Die Platte verwendete Platte wurde mittig an einer in den PUR-Hartschaum geklebten Öse drehbar aufgehängt. An den beiden unteren Ecken der Platte sind Schnüre angebracht, welche am Boden an einer Wasserwaage befestigt sind. Am Boden sind mit Klebeband Markierungen der Messpunkte alle 15 Grad aufgeklebt.
 
 \begin{figure}[H]
 	\centering
@@ -755,7 +759,7 @@ Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallf
 	\label{fig:schallfeld_messung}
 \end{figure}
 
-Die Abbildung \ref{fig:schallfeld_messung} zeigt den beschriebenen Aufbau. Die Wasserwaage dient als Gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist mittig auf der Platte und an der Unterseite des Messmikrofons in Abbildung \ref{fig:schallfeld_messung}  zu erkennen. Der Laser verlief durch einen Punkt, welcher an der unteren Seite mittig auf der Platte markiert ist, sowie der oberen mittigen Aufhängung, womit eine senkrechte Ausrichtung gegeben wurde. 
+Die Abbildung \ref{fig:schallfeld_messung} zeigt den beschriebenen Aufbau. Die Wasserwaage dient als Gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist mittig auf der Platte und an der Unterseite des Messmikrofons in Abbildung \ref{fig:schallfeld_messung}  zu erkennen. Der Laser verlief durch einen Punkt, welcher an der unteren Seite mittig auf der Platte markiert ist, sowie der oberen mittigen Aufhängung, womit eine senkrechte Ausrichtung gegeben wurde. Vermessen wurde hierbei nur die 70 $\times$ 44\,cm mit den Excitern an den Simulierten Positionen.
 
 Jede Messung wurde dreimal aufgenommen, anschließend wurden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
 
@@ -1108,19 +1112,17 @@ Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenü
 
 \section{Validierung und Vergleich der Ergebnisse}
 
+Die Ergebnissse der Simulation sowie der Versuchsaufbauten zeigen trotz vereinfachterannahmen ein Positives ergebnis. Dabei ist zu erkennen das die Simulierten Positionen Trotz Monolitischer Simulation eine höheren Schalldruckpegel erreichen als die vom Herteller verwendeten universal Positionen. Dennoch sind einige aspekte zu beachten welche die ergebnisse Beeinflusst haben können. 
 
 Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per Augenmaß und Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
  
 Der Messabstand von \SI{1}{\metre} erfüllt die Fernfeldbedingung $r > 2D^2/\lambda$ nur bis etwa \SI{4}{\kilo\hertz}. Für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ ergibt sich bei \SI{4}{\kilo\hertz} ein Mindestabstand von ca.\ \SI{1{,}14}{\metre}. Die Messungen bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} befinden sich somit im geometrischen Nahfeld der Platte, was die gemessene Richtcharakteristik gegenüber der tatsächlichen Fernfeldabstrahlung verzerren kann.
  
-Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden (vgl.\ Abbildung~\ref{fig:messaufbau_freifeldraum}). Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen. Ebenso stellen die Befestigungsschnüre und die Wasserwaage am Plattenfuß potenzielle Sekundärquellen dar, die durch die Plattenvibrationen angeregt werden können.
+Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden und ein Verbrennungsmotor auf einem Gestell wie in Abbildung~\ref{fig:messaufbau_freifeldraum} zu erkennen ist. Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen. 
  
 Die untere Grenzfrequenz des Freifeldraums begrenzt zudem die Gültigkeit der Messungen im Tieftonbereich. Bei \SI{63}{\hertz} ist davon auszugehen, dass die Absorberkeile nicht mehr vollständig wirksam sind und Raumreflexionen das Messergebnis beeinflussen.
 
-
-
- 
-Vergleich der Simulations- und Versuchsaufbau-Ergebnisse, Validierung der Ergebnisse und mögliche Abweichungen erklären.
+Zudem kann durch eine Messunsicherheit des DAQ sowie des verwendeten Messsmikrofons eine verfälschung des Graphen entstehen. Unterberücksichtigung dieser möglichen Messungenauigkeiten kann dennoch davon ausgegangen werden das die SPL Messung aussagekräftig ist da diese die Klassischen Charakteristiken von DML Lautsprechern aufzeigt. 
 
 
 
