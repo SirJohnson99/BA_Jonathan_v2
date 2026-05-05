@@ -785,17 +785,7 @@ Das Ziel des zweiten Versuchsaufbaus ist die Erfassung des abgestrahlten Schallf
 	\label{fig:schallfeld_messung}
 \end{figure}
 
-Die Abbildung \ref{fig:schallfeld_messung} zeigt den beschriebenen Aufbau. Die Wasserwaage dient als Gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist mittig auf der Platte und an der Unterseite des Messmikrofons in Abbildung \ref{fig:schallfeld_messung}  zu erkennen. Der Laser verlief durch einen Punkt, welcher an der unteren Seite mittig auf der Platte markiert ist, sowie der oberen mittigen Aufhängung, womit eine senkrechte Ausrichtung gegeben wurde. Vermessen wurde hierbei nur die 70 $\times$ 44\,cm mit den Excitern an den Simulierten Positionen.
-
-Jede Messung wurde dreimal aufgenommen, anschließend wurden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
-
-
-\clearpage
-
-\subsection{Messergebnisse und Auswertung}
-
-
-Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 70 $\times$ 44\,cm dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von 1 m. Zur Vermessung des Gesamtschalldruckpegels wurde die LabVIEW VI Sound Level Meter verwendet, die Mikrofonempfindlichkeit wurde eingestellt und über den Lautsprecher ein weißes Rauschen abgespielt, welches aufgenommen und über zehn Sekunden gemittelt wurde.
+Die Abbildung \ref{fig:schallfeld_messung} zeigt den beschriebenen Aufbau. Die Wasserwaage dient als Gewicht um die Platte gerade zu ziehen. Zur Ausrichtung der Platte wurde ein Laser verwendet, der grüne Laser ist mittig auf der Platte und an der Unterseite des Messmikrofons in Abbildung \ref{fig:schallfeld_messung}  zu erkennen. Der Laser verlief durch einen Punkt, welcher an der unteren Seite mittig auf der Platte markiert ist, sowie der oberen mittigen Aufhängung, womit eine senkrechte Ausrichtung gegeben wurde. Vermessen wurde hierbei nur die 70 $\times$ 44\,cm mit den Excitern an den Simulierten Positionen. Zur Vermessung des SPL wurde die LabVIEW VI Sound Level Meter verwendet.
 
 \begin{figure}[H]
 	\centering
@@ -804,8 +794,17 @@ Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 7
 	\label{fig:sound_level_meter}
 \end{figure}
 
+
 Die Abbildung \ref{fig:sound_level_meter} zeigt das Frontpanel der Sound Level Meter VI, zu erkennen ist die Mikrofonempfindlichkeit des iSEMcon Mikrofons und dass die Zeit der Mittelung auf \SI{10}{\second} gestellt ist. Rechts wird der gemittelte Wert angezeigt, welcher in diesem Testfall \SI{91,3}{\decibel} beträgt. 
 
+Jede Messung wurde dreimal aufgenommen, anschließend wurden die Messergebnisse gemittelt, um mögliche Messunsicherheiten zu minimieren. 
+
+
+\clearpage
+
+\subsection{Messergebnisse und Auswertung}
+
+Im Folgenden werden die Ergebnisse der Schallfeldmessung des DML-Lautsprechers 70 $\times$ 44\,cm dargestellt und ausgewertet. Die Messung erfolgte im Freifeldraum der Hochschule mit einer horizontalen Winkelauflösung von \SI{15}{\degree} bei einem Messabstand von 1 m.
 
 \begin{figure}[H]
     \centering
@@ -1125,14 +1124,13 @@ Bezüglich der Fullrange-Tauglichkeit ist die 70×44 cm Platte mit der Skript-Po
 
 Abbildung~\ref{fig:schalldruckpegel_spektrum} zeigt das gemessene Schalldruckpegel-Spektrum beider DML-Plattengrößen im Vergleich zur Bose-Referenz. Die durchgezogenen Linien repräsentieren die 70$\times$44\,cm Platte, die gestrichelten die 100$\times$70\,cm Platte.
 
-Im Tieftonbereich (25--200\,Hz) liegen beide Plattengrößen bei der Skript-Position (orange) relativ nah beieinander mit Pegeln um 45--52\,dB, während die Hersteller-Position (blau) bei der kleineren Platte einen schwächeren Tieftonpegel von ca.\ 40--47\,dB aufweist. Die größere 100$\times$70\,cm Platte erreicht erwartungsgemäß durch ihre größere abstrahlende Fläche im Tiefton tendenziell höhere Pegel.
+Im Tieftonbereich von 20--200\,Hz, liegen beide Plattengrößen bei der Skript-Position in orange gekennzeichnet, relativ nah beieinander mit Pegeln um 45--52\,dB, während die Hersteller-Position welche mit blau gekennzeichnet sind, bei der kleineren Platte einen schwächeren Tieftonpegel von ca.\ 40--47\,dB aufweist. Die größere 100$\times$70\,cm Platte erreicht erwartungsgemäß durch ihre größere abstrahlende Fläche im Tiefton tendenziell höhere Pegel.
 
-Im Mittenbereich (400--1500\,Hz) zeigt die Skript-Position beider Plattengrößen konsistent höhere Pegel (55--65\,dB) als die Hersteller-Position (50--60\,dB). Auffällig ist, dass die 70$\times$44\,cm Platte mit Skript-Position in diesem Bereich teilweise sogar höhere Pegel als die größere Platte erreicht, was auf eine effizientere Anregung durch die optimierte Exciter-Positionierung hindeutet.
+Im Mittenbereich, 400--1500\,Hz, zeigt die Skript-Position beider Plattengrößen konsistent höhere Pegel von ca.55--65\,dB, als die Hersteller-Position welche bei ca. 50--60\,dB liegt. Auffällig ist, dass die 70$\times$44\,cm Platte mit Skript-Position in diesem Bereich teilweise sogar höhere Pegel als die größere Platte erreicht, was auf eine effizientere Anregung durch die optimierte Exciter-Positionierung hindeutet.
 
-Im Hochtonbereich (oberhalb 5\,kHz) zeigen alle DML-Konfigurationen einen deutlichen Pegelabfall auf 35--50\,dB, bleiben aber durchgehend über der Bose-Referenz (20--30\,dB). Die charakteristischen Schwankungen und Einbrüche sind bei den DML-Systemen weniger ausgeprägt als beim konventionellen Lautsprecher, was auf die breitbandige Abstrahlung der Biegewellenplatten zurückzuführen ist.
+Im Hochtonbereich oberhalb 5\,kHz, zeigen alle DML-Konfigurationen einen deutlichen Pegelabfall auf 35--50\,dB, bleiben aber durchgehend über der Bose-Referenz welche sich im bereich 20--30\,dB bewegt. Die charakteristischen Schwankungen und Einbrüche sind bei den DML-Systemen weniger ausgeprägt als beim konventionellen Lautsprecher, was auf die breitbandige Abstrahlung der Biegewellenplatten zurückzuführen ist.
 
-Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenüber der Hersteller-Position für beide Plattengrößen, wobei die 70$\times$44\,cm Platte mit Skript-Position einen besonders ausgewogenen Frequenzverlauf aufweist. Zudem gib es aktive störquellen wie lüftergeräusche des PC und DAQ im Freifeldraum welche einfluss auf die Messergebnisse haben.
-
+Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenüber der Hersteller-Position für beide Plattengrößen, wobei die 70$\times$44\,cm Platte mit Skript-Position einen besonders ausgewogenen Frequenzverlauf aufweist. 
 
 \clearpage
 
