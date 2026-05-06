@@ -1163,7 +1163,7 @@ ca.\ 1000\,Hz & 1000--1100\,Hz (Resonanzbereich) & $<$100\,Hz & akzeptabel \\
 \end{tabularx}
 \end{table}
 
-Die Abweichungen zwischen simulierten und gemessenen Eigenfrequenzen nehmen mit steigender Frequenz tendenziell zu, was auf mehrere Faktoren zurückzuführen ist. Erstens wurde die Sandwichplatte in der Simulation als monolithische Ersatzplatte modelliert, was die realen Schichteigenschaften nur näherungsweise abbildet. Zweitens wurden die Materialparameter aus dem Datenblatt für KAPA Graph übernommen, da für KAPA Line keine vollständigen Angaben vorlagen. Drittens wurde der Exciter selbst nicht in das FEM-Modell integriert, obwohl dessen Masse und Steifigkeit die lokale Modenstruktur beeinflussen können. Trotz dieser Vereinfachungen liegt die Übereinstimmung im Tiefton- und unteren Mittenbereich im Rahmen von 10--15\,\%, was für eine ingenieurmäßige Auslegung als hinreichend genau anzusehen ist.
+Die Abweichungen zwischen simulierten und gemessenen Eigenfrequenzen nehmen mit steigender Frequenz tendenziell zu, was auf mehrere Faktoren zurückzuführen ist. Erstens wurde die Sandwichplatte in der Simulation als monolithische Ersatzplatte modelliert, was die realen Schichteigenschaften nur näherungsweise abbildet. Zweitens wurde zur Berechnung der Biegesteifigkeit das E-Modul aus dem Datenblatt von KAPA Graph herangezogen, da für KAPA Line kein E-Modul angegeben war -- die übrigen Materialparameter wie Flächenmasse und Plattendicke wurden jedoch direkt aus dem KAPA Line Datenblatt entnommen. Drittens wurde der Exciter selbst nicht in das FEM-Modell integriert, obwohl dessen Masse und Steifigkeit die lokale Modenstruktur beeinflussen können. Trotz dieser Vereinfachungen liegt die Übereinstimmung im Tiefton- und unteren Mittenbereich im Rahmen von 10--15\,\%, was für eine ingenieurmäßige Auslegung als hinreichend genau anzusehen ist.
 
 \subsection{Korrelation zwischen Knotenlinien und Frequenzgang-Einbrüchen}
 
@@ -1188,7 +1188,8 @@ Die Gegenüberstellung von Simulation und Messung erlaubt eine differenzierte Be
 
 \textbf{Grenzen des Ansatzes:}
 \begin{itemize}
-    \item Im Hochtonbereich oberhalb von 2\,kHz steigt die Modendichte stark an, sodass einzelne Moden nicht mehr separierbar sind. Die Simulation kann hier nur noch statistische Aussagen über die mittlere Modenaktivität liefern.
+    \item Die Eigenfrequenzanalyse wurde nur bis ca.\ 1000\,Hz durchgeführt und bildet somit den Hochtonbereich oberhalb dieser Frequenz nicht ab. Da die Messungen jedoch das gesamte hörbare Spektrum bis 20\,kHz umfassen, fehlt für den Frequenzbereich oberhalb von 1000\,Hz eine direkte Validierungsgrundlage aus der Simulation. Dies kann zu systematischen Abweichungen zwischen Simulation und Messung im Mittel- und Hochtonbereich führen.
+    \item Im Hochtonbereich oberhalb von 2\,kHz steigt die Modendichte stark an, sodass einzelne Moden nicht mehr separierbar sind. Selbst bei einer Erweiterung der Simulation auf höhere Frequenzen könnte diese nur noch statistische Aussagen über die mittlere Modenaktivität liefern.
     \item Die Vernachlässigung des Exciters als Masse-Feder-System führt zu systematischen Abweichungen bei höheren Frequenzen.
     \item Die reale Sandwichstruktur mit ihren frequenzabhängigen Dämpfungseigenschaften wird durch das monolithische Modell nur unvollständig erfasst.
 \end{itemize}
