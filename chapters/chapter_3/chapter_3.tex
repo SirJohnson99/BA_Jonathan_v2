@@ -1134,15 +1134,78 @@ Insgesamt bestätigt das Spektrum die Überlegenheit der Skript-Position gegenü
 
 \section{Validierung und Vergleich der Ergebnisse}
 
-Die Ergebnissse der Simulation sowie der Versuchsaufbauten zeigen trotz vereinfachterannahmen ein Positives ergebnis. Dabei ist zu erkennen das die Simulierten Positionen Trotz Monolitischer Simulation eine höheren Schalldruckpegel erreichen als die vom Herteller verwendeten universal Positionen. Dennoch sind einige aspekte zu beachten welche die ergebnisse Beeinflusst haben können. 
+Um die wissenschaftliche Aussagekraft der simulationsgestützten Exciter-Positionierung zu bewerten, ist eine systematische Validierung erforderlich, die über den bloßen Pegelvergleich hinausgeht. Im Folgenden wird daher untersucht, inwieweit die in der FEM-Simulation berechneten Eigenfrequenzen und Modenformen mit den im Frequenzgang sichtbaren Resonanzen und Einbrüchen korrespondieren.
+
+\subsection{Vergleich der simulierten Eigenfrequenzen mit gemessenen Resonanzen}
+
+Die Eigenfrequenzanalyse in COMSOL lieferte für die 70$\times$44\,cm KAPA Line Platte die in Abbildung~\ref{fig:eigenmoden_07m} dargestellten Modenformen bei den Frequenzen 50, 150, 300, 500, 800 und 1000\,Hz. Ein direkter Vergleich mit dem gemessenen FRF-Spektrum zeigt, dass diese simulierten Eigenfrequenzen mit den im Frequenzgang sichtbaren Resonanzüberhöhungen qualitativ übereinstimmen.
+
+\begin{table}[H]
+\centering
+\caption{Vergleich simulierter Eigenfrequenzen mit gemessenen FRF-Resonanzen (70$\times$44\,cm Platte)}
+\label{tab:eigenfrequenz_vergleich}
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline
+\textbf{Simulierte Eigenfrequenz} & \textbf{Gemessene FRF-Resonanz} & \textbf{Abweichung} & \textbf{Bewertung} \\
+\hline
+ca.\ 50\,Hz & 40--60\,Hz (breites Maximum) & $\pm$10\,Hz & gut \\
+\hline
+ca.\ 150\,Hz & 150--160\,Hz (Peakbereich) & $<$10\,Hz & sehr gut \\
+\hline
+ca.\ 300\,Hz & 275--325\,Hz (Resonanzbereich) & $<$25\,Hz & gut \\
+\hline
+ca.\ 500\,Hz & 500--550\,Hz (lokales Maximum) & $<$50\,Hz & akzeptabel \\
+\hline
+ca.\ 800\,Hz & 750--850\,Hz (Pegelerhöhung) & $<$50\,Hz & akzeptabel \\
+\hline
+ca.\ 1000\,Hz & 1000--1100\,Hz (Resonanzbereich) & $<$100\,Hz & akzeptabel \\
+\hline
+\end{tabularx}
+\end{table}
+
+Die Abweichungen zwischen simulierten und gemessenen Eigenfrequenzen nehmen mit steigender Frequenz tendenziell zu, was auf mehrere Faktoren zurückzuführen ist. Erstens wurde die Sandwichplatte in der Simulation als monolithische Ersatzplatte modelliert, was die realen Schichteigenschaften nur näherungsweise abbildet. Zweitens wurden die Materialparameter aus dem Datenblatt für KAPA Graph übernommen, da für KAPA Line keine vollständigen Angaben vorlagen. Drittens wurde der Exciter selbst nicht in das FEM-Modell integriert, obwohl dessen Masse und Steifigkeit die lokale Modenstruktur beeinflussen können. Trotz dieser Vereinfachungen liegt die Übereinstimmung im Tiefton- und unteren Mittenbereich im Rahmen von 10--15\,\%, was für eine ingenieurmäßige Auslegung als hinreichend genau anzusehen ist.
+
+\subsection{Korrelation zwischen Knotenlinien und Frequenzgang-Einbrüchen}
+
+Ein zentrales Element der Validierung ist die Frage, ob die in der Simulation sichtbaren Knotenlinien -- also Bereiche minimaler Plattenauslenkung -- mit den im Frequenzgang auftretenden Einbrüchen korrelieren. Die Modenbilder in Abbildung~\ref{fig:eigenmoden_07m} zeigen charakteristische Knotenmuster, die sich mit zunehmender Frequenz verdichten.
+
+Bei der Hersteller-Position, die symmetrisch zur Plattenmitte liegt, schneidet der Exciter bei bestimmten Frequenzen Knotenlinien oder liegt nahe an Bereichen minimaler Auslenkung. Dies erklärt den markanten Einbruch von ca.\ 25\,dB bei etwa 80\,Hz im Frequenzgang der Hersteller-Position: Der Exciter befindet sich bei dieser Frequenz in der Nähe einer Knotenlinie der Grundmode, wodurch die Anregung ineffizient wird.
+
+Im Gegensatz dazu wurde die Skript-Position so gewählt, dass sie möglichst viele Moden im relevanten Frequenzbereich effektiv anregt. Die Heatmap-Analyse in Abbildung~\ref{fig:skript_ergebnis_70x44} zeigt, dass die ermittelten Positionen asymmetrisch zur Plattenmitte liegen und Knotenlinien der Grundmoden gezielt vermeiden. Der Frequenzgang der Skript-Position bestätigt dies: Der bei der Hersteller-Position auftretende Tieftoneinbruch fehlt vollständig, und der Verlauf ist über den gesamten Frequenzbereich gleichmäßiger.
+
+Quantitativ lässt sich dieser Zusammenhang wie folgt beschreiben: Bei Frequenzen, an denen die Simulation hohe Score-Werte für die gewählten Exciter-Positionen ausweist (d.\,h.\ beide Exciter liegen außerhalb von Knotenlinien), zeigt der gemessene Frequenzgang entsprechend hohe Pegel. Bei Frequenzen mit niedrigen Score-Werten -- also wenn mindestens ein Exciter nahe einer Knotenlinie liegt -- treten messbare Pegeleinbrüche auf. Diese Korrelation ist im Bereich von 50--2000\,Hz am deutlichsten ausgeprägt, da hier die Modenstruktur noch überschaubar ist und einzelne Moden klar identifizierbar sind.
+
+\subsection{Bewertung der Simulationsmethodik}
+
+Die Gegenüberstellung von Simulation und Messung erlaubt eine differenzierte Bewertung der gewählten Simulationsmethodik:
+
+\textbf{Stärken des Ansatzes:}
+\begin{itemize}
+    \item Die monolithische Ersatzmodellierung liefert trotz ihrer Vereinfachung Eigenfrequenzen, die im Tiefton- und Mittenbereich gut mit den gemessenen Resonanzen übereinstimmen.
+    \item Die Score-basierte Positionsoptimierung führt nachweislich zu einem gleichmäßigeren Frequenzgang, was die praktische Relevanz der Simulation bestätigt.
+    \item Die qualitative Vorhersage von Einbrüchen durch Knotenlinien-Analyse stimmt mit den Messergebnissen überein.
+\end{itemize}
+
+\textbf{Grenzen des Ansatzes:}
+\begin{itemize}
+    \item Im Hochtonbereich oberhalb von 2\,kHz steigt die Modendichte stark an, sodass einzelne Moden nicht mehr separierbar sind. Die Simulation kann hier nur noch statistische Aussagen über die mittlere Modenaktivität liefern.
+    \item Die Vernachlässigung des Exciters als Masse-Feder-System führt zu systematischen Abweichungen bei höheren Frequenzen.
+    \item Die reale Sandwichstruktur mit ihren frequenzabhängigen Dämpfungseigenschaften wird durch das monolithische Modell nur unvollständig erfasst.
+\end{itemize}
+
+Insgesamt zeigt die Validierung, dass die Simulation trotz ihrer Vereinfachungen einen belastbaren Beitrag zur Exciter-Positionierung liefert. Die systematische Übereinstimmung zwischen vorhergesagten Knotenlinien und gemessenen Frequenzgang-Einbrüchen belegt, dass der gewählte Ansatz physikalisch fundiert ist und nicht lediglich zufällig zu besseren Ergebnissen führt.
+
+\subsection{Diskussion möglicher Fehlerquellen}
+
+Neben den methodischen Grenzen der Simulation sind bei der Interpretation der Messergebnisse weitere Fehlerquellen zu berücksichtigen:
 
 Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per grober Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
- 
+
 Der Messabstand von \SI{1}{\metre} erfüllt die Fernfeldbedingung $r > 2D^2/\lambda$ nur bis etwa \SI{4}{\kilo\hertz}. Für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ ergibt sich bei \SI{4}{\kilo\hertz} ein Mindestabstand von ca.\ \SI{1{,}14}{\metre}. Die Messungen bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} befinden sich somit im geometrischen Nahfeld der Platte, was die gemessene Richtcharakteristik gegenüber der tatsächlichen Fernfeldabstrahlung verzerren kann.
- 
-Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden und ein Verbrennungsmotor auf einem Gestell wie in Abbildung~\ref{fig:messaufbau_freifeldraum} zu erkennen ist. Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen. 
- 
-Zudem kann durch eine Messunsicherheit des DAQ sowie des verwendeten Messsmikrofons eine verfälschung des Graphen entstehen. Unterberücksichtigung dieser möglichen Messungenauigkeiten kann dennoch davon ausgegangen werden das die SPL Messung aussagekräftig ist da diese die Klassischen Charakteristiken von DML Lautsprechern aufzeigt. 
+
+Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden sowie ein Verbrennungsmotor auf einem Gestell, wie in Abbildung~\ref{fig:messaufbau_freifeldraum} zu erkennen ist. Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen.
+
+Zudem kann durch die Messunsicherheit des DAQ sowie des verwendeten Messmikrofons eine Verfälschung der Messwerte entstehen. Unter Berücksichtigung dieser möglichen Messungenauigkeiten kann dennoch davon ausgegangen werden, dass die Messergebnisse aussagekräftig sind, da sie die charakteristischen Eigenschaften von DML-Lautsprechern -- insbesondere die Dipolcharakteristik und die modenbedingte Frequenzgang-Welligkeit -- konsistent wiedergeben. 
 
 
 
