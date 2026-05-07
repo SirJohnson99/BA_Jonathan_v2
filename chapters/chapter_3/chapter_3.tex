@@ -446,11 +446,11 @@ Im Rahmen dieser Arbeit wird die Strukturschwingung einer DML-Platte rechnerisch
 
 Bei der Simulation zur Entwicklung des DML wurde sich für eine Eigenfrequenzanalyse der verwendeten Platten und gegen die Simulation eines Exciters als Federmassesystem, welches die Platte anregt und der abgestrahlte Schalldruck berechnet wird, entschieden. Ausschlaggebend für diese Entscheidung ist der Unterschied in der Komplexität des Modellaufbaus, da eine Eigenfrequenzanalyse in der Komplexität und Rechenleistung effizienter ist.
 
-Im rahmen der Simulation wurden zwei KAPA Line Platten mit den Größen \SI{1}{\meter} $\times$ \SI{0,7}{\meter} und \SI{0,7}{\meter} $\times$ \SI{0,44}{\meter} mit der Stärke \SI{15}{\milli\meter} auf deren Eigenfrequenzen untersucht. Dabei wurden die Plattenmaße und die Eigenschaften des Materials welche dem Datenblatt im anhang C entnommen werden können, in dem Model Builder eingegeben. Die Platte wurde in der Simulation als eine monolithische Platte angenommen und nicht als Sandwichbauweise. Für diesen Aufbau wurde sich aufgrund von geringerer Komplexität des Modells und der fehlender Materialeigenschaften entschieden. Da im KAPA Line Datenblatt aus Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzelnen Materialien, Deckschicht und Kern angegeben wurden. 
+Im Rahmen der Simulation wurden zwei KAPA Line Platten mit den Größen \SI{1}{\meter} $\times$ \SI{0,7}{\meter} und \SI{0,7}{\meter} $\times$ \SI{0,44}{\meter} mit der Stärke \SI{15}{\milli\meter} auf deren Eigenfrequenzen untersucht. Dabei wurden die Plattenmaße und die Eigenschaften des Materials, welche dem Datenblatt im Anhang C entnommen werden können, in dem Model Builder eingegeben. Die Platte wurde in der Simulation als eine monolithische Platte angenommen und nicht als Sandwichbauweise. Für diesen Aufbau wurde sich aufgrund von geringerer Komplexität des Modells und der fehlender Materialeigenschaften entschieden. Da im KAPA Line Datenblatt aus Anhang C nur die Materialeigenschaften als Sandwichbauweise und nicht der einzelnen Materialien, Deckschicht und Kern angegeben wurden. 
 
 Die Anregung der Platten wird im Rahmen einer Eigenfrequenzanalyse untersucht. Dabei werden die Eigenmoden der Platten im Frequenzbereich ab 0Hz bis zur 400. Eigenmode berechnet. Die Anzahl der Eigenmoden wurde gewählt, da diese für beide Platten die 1.000 Hz überschritten haben und die Modendichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Im Konzeptentwurf wurde eine freihängende Lagerung ausgewählt. Aus diesem Grund wird die Platte in der Simulation ohne zusätzliche Lagerbedingungen modelliert.
 
-Der Modellaufbau der Platte in COMSOL Multiphysics ist in Anhang G dargestellt und zeigt die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei \SI{0}{\hertz} und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
+Der Modellaufbau der Platte in COMSOL Multiphysics ist in Anhang F dargestellt und zeigt die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei \SI{0}{\hertz} und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
 
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
@@ -550,7 +550,7 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 \end{figure}
 
 Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in Form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
-Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Das zugehörige Datenblatt des Step-Down-Converters ist Anhang S zu entnehmen. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
+Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Das zugehörige Datenblatt des Step-Down-Converters ist Anhang L zu entnehmen. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
 Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus dem Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
@@ -569,7 +569,7 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 \end{enumerate}
 
 
- Vor der While-Schleife werden Parameter mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons, welche aus dem Datenblatt im Anhang YX entnommen werden kann. Zusätzlich lassen sich die Abtastparameter bestimmen, diese bestimmen die Blockgröße und Anzahl der Mittelungen. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz fs und der Blocklänge N.
+ Vor der While-Schleife werden Parameter mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons, welche aus dem Datenblatt im Anhang H entnommen werden kann. Zusätzlich lassen sich die Abtastparameter bestimmen, diese bestimmen die Blockgröße und Anzahl der Mittelungen. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz fs und der Blocklänge N.
  
  \begin{equation}
 \Delta f = \frac{f_s}{N}
@@ -766,7 +766,7 @@ Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Fr
 
 Zur Untersuchung der akustischen Eigenschaften des DML-Systems wurden im Rahmen dieser Arbeit zwei Versuchsaufbauten umgesetzt. Um die Vergleichbarkeit der Messergebnisse zu gewährleisten, wurden die Einstellungen des Equalizers und des Audioverstärkers über alle Messungen hinweg konstant gehalten. Der Gain des Equalizers wurde auf den Wert 5 und die Lautstärke des Audioverstärkers auf den Wert 10 eingestellt. Eine signalanpassung durch den Equalizer erfolgte nicht. Die Temperatur und Luftfeuchtigkeit waren während der Messungen konstant bei 21 Grad C und 25 \% Luftfeuchtigkeit.
 
-Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden zwei verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Bei den Plattengrößen handelt es sich um das Herstellermaß von 100 $\times$ 70\,cm und um das mit dem angepassten Seitenverhältnis von 70 $\times$ 44\,cm. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter. Die exakten Exciterpositionen können den technischen Zeichnungen aus Anhang G-J entnommen werden. Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert. 
+Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden zwei verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Bei den Plattengrößen handelt es sich um das Herstellermaß von 100 $\times$ 70\,cm und um das mit dem angepassten Seitenverhältnis von 70 $\times$ 44\,cm. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter. Die exakten Exciterpositionen können den technischen Zeichnungen aus Anhang M--P entnommen werden. Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert. 
 
 \begin{figure}[H]
 	\centering
@@ -1062,7 +1062,7 @@ Die FRF beschreibt das Verhältnis zwischen Eingangs- und Ausgangssignal eines S
 \end{figure}
 
 
-In Abbildung \ref{fig:frequenzgang_vergleich} sind die FRF-Übertragungsfunktionen der beiden DML-Platten in den Hersteller- und Skript-Positionen sowie der Bose-Referenz direkt gegenübergestellt. Die Linienzuordnung entspricht der Legende
+In Abbildung \ref{fig:frequenzgang_vergleich} sind die FRF-Übertragungsfunktionen der beiden DML-Platten in den Hersteller- und Skript-Positionen sowie der Bose-Referenz direkt gegenübergestellt. Die Linienzuordnung entspricht der Legende.
 
 
 Im Tieftonbereich zwischen 25\,Hz und 150\,Hz fällt die 70$\times$44\,cm Platte mit Hersteller-Position von 98,5\,dB auf 82,9\,dB ab, was einer Differenz von 15,6\,dB entspricht. Die Skript-Position derselben Platte zeigt mit einem Abfall von 9,3\,dB einen deutlich geringeren Einbruch. Die 100$\times$70\,cm Platte bleibt in beiden Konfigurationen innerhalb von etwa 1\,dB konstant und ist damit im Tiefton merklich stabiler. Die Bose-Referenz weist in diesem Bereich einen Abfall von 6,7\,dB auf.
@@ -1142,79 +1142,84 @@ Oberhalb von 5\,kHz liegen die DML-Konfigurationen in einem Pegelband zwischen 3
 
 \section{Validierung und Vergleich der Ergebnisse}
 
-Um die wissenschaftliche Aussagekraft der simulationsgestützten Exciter-Positionierung zu bewerten, ist eine systematische Validierung erforderlich, die über den bloßen Pegelvergleich hinausgeht. Im Folgenden wird daher untersucht, inwieweit die in der FEM-Simulation berechneten Eigenfrequenzen und Modenformen mit den im Frequenzgang sichtbaren Resonanzen und Einbrüchen korrespondieren.
+Um die Aussagekraft der simulationsgestützten Exciter-Positionierung zu bewerten, wird im Folgenden untersucht, inwieweit die in der FEM-Simulation berechneten Eigenfrequenzen und Modenformen mit den im Frequenzgang sichtbaren Resonanzen und Einbrüchen korrespondieren. Zusätzlich werden die DML-Konfigurationen mit dem Bose-Referenzlautsprecher verglichen und die gewonnene Richtcharakteristik gegen die theoretische Erwartung gestellt.
 
 \subsection{Vergleich der simulierten Eigenfrequenzen mit gemessenen Resonanzen}
 
-Die Eigenfrequenzanalyse in COMSOL lieferte für die 70$\times$44\,cm KAPA Line Platte die in Abbildung~\ref{fig:eigenmoden_07m} dargestellten Modenformen bei den Frequenzen 50, 150, 300, 500, 800 und 1000\,Hz. Ein direkter Vergleich mit dem gemessenen FRF-Spektrum zeigt, dass diese simulierten Eigenfrequenzen mit den im Frequenzgang sichtbaren Resonanzüberhöhungen qualitativ übereinstimmen.
+Die Eigenfrequenzanalyse in COMSOL berechnet für die 70$\times$44\,cm KAPA Line Platte 400 Eigenmoden ab 0\,Hz, deren höchste Frequenzen oberhalb von 1\,kHz liegen. Aus diesem Modenspektrum sind in Abbildung~\ref{fig:eigenmoden_07m} sechs repräsentative Modenformen bei 50, 150, 300, 500, 800 und 1000\,Hz dargestellt. Eine simulierte Eigenfrequenz erzeugt im FRF entweder ein lokales Maximum, sofern der Exciter die zugehörige Mode anregt, oder ein lokales Minimum, sofern er auf einer Knotenlinie der Mode liegt \cite{Cremer1996}. Tabelle~\ref{tab:eigenfrequenz_vergleich} fasst die Zuordnung zwischen den Eigenfrequenzen und dem FRF-Verhalten der 70$\times$44\,cm Platte zusammen.
 
 \begin{table}[H]
 \centering
-\caption{Vergleich simulierter Eigenfrequenzen mit gemessenen FRF-Resonanzen (70$\times$44\,cm Platte)}
+\caption{Zuordnung simulierter Eigenfrequenzen zu Merkmalen im FRF-Spektrum der 70$\times$44\,cm Platte}
 \label{tab:eigenfrequenz_vergleich}
-\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
 \hline
-\textbf{Simulierte Eigenfrequenz} & \textbf{Gemessene FRF-Resonanz} & \textbf{Abweichung} & \textbf{Bewertung} \\
+\textbf{Sim.\ Eigenfreq.} & \textbf{FRF Hersteller} & \textbf{FRF Skript} & \textbf{Bewertung} \\
 \hline
-ca.\ 50\,Hz & 40--60\,Hz (breites Maximum) & $\pm$10\,Hz & gut \\
+ca.\ 50\,Hz & nicht erfasst & nicht erfasst & außerhalb der Datenpunkte \\
 \hline
-ca.\ 150\,Hz & 150--160\,Hz (Peakbereich) & $<$10\,Hz & sehr gut \\
+ca.\ 150\,Hz & 82,9\,dB (Trog) & 81,7\,dB (Trog) & Knotenlinie nahe beider Positionen \\
 \hline
-ca.\ 300\,Hz & 275--325\,Hz (Resonanzbereich) & $<$25\,Hz & gut \\
+ca.\ 300\,Hz & 97,4\,dB (Maximum) & 88,2\,dB & Maximum bei Hersteller \\
 \hline
-ca.\ 500\,Hz & 500--550\,Hz (lokales Maximum) & $<$50\,Hz & akzeptabel \\
+ca.\ 500\,Hz & 98,8\,dB (Maximum) & 95,6\,dB (Maximum) & Maximum bei beiden \\
 \hline
-ca.\ 800\,Hz & 750--850\,Hz (Pegelerhöhung) & $<$50\,Hz & akzeptabel \\
+ca.\ 800\,Hz & 86,5\,dB (Trog) & 85,0\,dB (Trog) & Knotenlinie nahe beider Positionen \\
 \hline
-ca.\ 1000\,Hz & 1000--1100\,Hz (Resonanzbereich) & $<$100\,Hz & akzeptabel \\
+ca.\ 1000\,Hz & 92,7\,dB & 89,8\,dB & moderate Pegel, kein klares Merkmal \\
 \hline
 \end{tabularx}
 \end{table}
 
-Die Abweichungen zwischen simulierten und gemessenen Eigenfrequenzen nehmen mit steigender Frequenz tendenziell zu, was auf mehrere Faktoren zurückzuführen ist. Erstens wurde die Sandwichplatte in der Simulation als monolithische Ersatzplatte modelliert, was die realen Schichteigenschaften nur näherungsweise abbildet. Zweitens wurde zur Berechnung der Biegesteifigkeit das E-Modul aus dem Datenblatt von KAPA Graph herangezogen, da für KAPA Line kein E-Modul angegeben war -- die übrigen Materialparameter wie Flächenmasse und Plattendicke wurden jedoch direkt aus dem KAPA Line Datenblatt entnommen. Drittens wurde der Exciter selbst nicht in das FEM-Modell integriert, obwohl dessen Masse und Steifigkeit die lokale Modenstruktur beeinflussen können. Trotz dieser Vereinfachungen liegt die Übereinstimmung im Tiefton- und unteren Mittenbereich im Rahmen von 10--15\,\%, was als gut anzusehen ist.
+Die Modenformen bei 300 und 500\,Hz korrelieren mit deutlichen Pegelmaxima, während bei 150 und 800\,Hz beide Exciter-Positionen lokale Minima zeigen, was auf Knotenlinien nahe beider Positionen hindeutet. Diese Beobachtung wird in Abschnitt~\ref{subsec:knotenlinien} vertieft. Oberhalb von 2\,kHz nimmt die Modendichte stark zu, sodass einzelne Eigenmoden nicht mehr eindeutig zugeordnet werden können \cite{Cremer1996}. Die Abweichungen zwischen simulierten und gemessenen Frequenzen lassen sich auf die monolithische Ersatzmodellierung der Sandwichplatte, die Übernahme des E-Moduls von KAPA Graph für KAPA Line sowie die Vernachlässigung des Exciters im FEM-Modell zurückführen.
 
 \subsection{Korrelation zwischen Knotenlinien und Frequenzgang-Einbrüchen}
+\label{subsec:knotenlinien}
 
-Ein zentrales Element der Validierung ist die Frage, ob die in der Simulation sichtbaren Knotenlinien -- also Bereiche minimaler Plattenauslenkung -- mit den im Frequenzgang auftretenden Einbrüchen korrelieren. Die Modenbilder in Abbildung~\ref{fig:eigenmoden_07m} zeigen charakteristische Knotenmuster, die sich mit zunehmender Frequenz verdichten.
+Im Tieftonbereich zeigt sich der Effekt der Knotenlinien-Anregung am deutlichsten. Bei der 70$\times$44\,cm Hersteller-Position fällt der Pegel von 98,5\,dB bei 25\,Hz auf 82,9\,dB bei 150\,Hz und steigt bei 275\,Hz wieder auf 97,4\,dB an. Da die Skript-Position bei 150\,Hz mit 81,7\,dB einen vergleichbaren Wert erreicht, ist von einer Knotenlinie der 150\,Hz-Mode in der Nähe beider Exciter-Positionen auszugehen. Der Unterschied liegt in den benachbarten Moden: Die Skript-Position bleibt mit 91,0\,dB bei 25\,Hz und 88,2\,dB bei 275\,Hz im Mittel rund 7\,dB niedriger, sodass der Tiefton-Einbruch dort mit 9,3\,dB statt 15,6\,dB merklich kleiner ausfällt.
 
-Bei der Hersteller-Position, die symmetrisch zur Plattenmitte liegt, schneidet der Exciter bei bestimmten Frequenzen Knotenlinien oder liegt nahe an Bereichen minimaler Auslenkung. Dies erklärt den markanten Einbruch von ca.\ 25\,dB bei etwa 80\,Hz im Frequenzgang der Hersteller-Position: Der Exciter befindet sich bei dieser Frequenz in der Nähe einer Knotenlinie der Grundmode, wodurch die Anregung ineffizient wird.
-
-Im Gegensatz dazu wurde die Skript-Position so gewählt, dass sie möglichst viele Moden im relevanten Frequenzbereich effektiv anregt. Die Heatmap-Analyse in Abbildung~\ref{fig:skript_ergebnis_70x44} zeigt, dass die ermittelten Positionen asymmetrisch zur Plattenmitte liegen und Knotenlinien der Grundmoden gezielt vermeiden. Der Frequenzgang der Skript-Position bestätigt dies: Der bei der Hersteller-Position auftretende Tieftoneinbruch fehlt vollständig, und der Verlauf ist über den gesamten Frequenzbereich gleichmäßiger.
-
-Quantitativ lässt sich dieser Zusammenhang wie folgt beschreiben: Bei Frequenzen, an denen die Simulation hohe Score-Werte für die gewählten Exciter-Positionen ausweist (d.\,h.\ beide Exciter liegen außerhalb von Knotenlinien), zeigt der gemessene Frequenzgang entsprechend hohe Pegel. Bei Frequenzen mit niedrigen Score-Werten -- also wenn mindestens ein Exciter nahe einer Knotenlinie liegt -- treten messbare Pegeleinbrüche auf. Diese Korrelation ist im Bereich von 50--2000\,Hz am deutlichsten ausgeprägt, da hier die Modenstruktur noch überschaubar ist und einzelne Moden klar identifizierbar sind.
+Die Heatmap-Analyse in Abbildung~\ref{fig:skript_ergebnis_70x44} zeigt, dass die Skript-Positionen asymmetrisch zur Plattenmitte liegen und das Kreuzungsmuster der Knotenlinien gezielt vermeiden. Allgemein gilt: Bei hohen Score-Werten der Simulation, wenn beide Exciter außerhalb von Knotenlinien liegen, treten hohe FRF-Pegel auf; bei niedrigen Score-Werten messbare Einbrüche. Diese Korrelation ist im Bereich von 50--2000\,Hz am deutlichsten, da hier die Modenstruktur noch überschaubar bleibt.
 
 \subsection{Bewertung der Simulationsmethodik}
 
-Die Gegenüberstellung von Simulation und Messung erlaubt eine differenzierte Bewertung der gewählten Simulationsmethodik:
-
-\textbf{Stärken des Ansatzes:}
+\textbf{Stärken:}
 \begin{itemize}
-    \item Die monolithische Ersatzmodellierung liefert trotz ihrer Vereinfachung Eigenfrequenzen, die im Tiefton- und Mittenbereich gut mit den gemessenen Resonanzen übereinstimmen.
-    \item Die Score-basierte Positionsoptimierung führt nachweislich zu einem gleichmäßigeren Frequenzgang, was die praktische Relevanz der Simulation bestätigt.
-    \item Die qualitative Vorhersage von Einbrüchen durch Knotenlinien-Analyse stimmt mit den Messergebnissen überein.
+    \item Die monolithische Ersatzmodellierung liefert Eigenfrequenzen, die im Tiefton- und Mittenbereich gut mit Merkmalen des FRF übereinstimmen.
+    \item Die Score-basierte Optimierung führt zu einem gleichmäßigeren Tiefton-Frequenzgang.
+    \item Die Vorhersage von Pegelminima durch Knotenlinien-Analyse stimmt qualitativ mit den Messergebnissen überein.
 \end{itemize}
 
-\textbf{Grenzen des Ansatzes:}
+\textbf{Grenzen:}
 \begin{itemize}
-    \item Die Eigenfrequenzanalyse wurde nur bis ca.\ 1000\,Hz durchgeführt und bildet somit den Hochtonbereich oberhalb dieser Frequenz nicht ab. Da die Messungen jedoch das gesamte hörbare Spektrum bis 20\,kHz umfassen, fehlt für den Frequenzbereich oberhalb von 1000\,Hz eine direkte Validierungsgrundlage aus der Simulation. Dies kann zu systematischen Abweichungen zwischen Simulation und Messung im Mittel- und Hochtonbereich führen.
-    \item Im Hochtonbereich oberhalb von 2\,kHz steigt die Modendichte stark an, sodass einzelne Moden nicht mehr separierbar sind. Selbst bei einer Erweiterung der Simulation auf höhere Frequenzen könnte diese nur noch statistische Aussagen über die mittlere Modenaktivität liefern.
-    \item Die Vernachlässigung des Exciters als Masse-Feder-System führt zu systematischen Abweichungen bei höheren Frequenzen.
-    \item Die reale Sandwichstruktur mit ihren frequenzabhängigen Dämpfungseigenschaften wird durch das monolithische Modell nur unvollständig erfasst.
+    \item Oberhalb von 2\,kHz nimmt die Modendichte so stark zu, dass nur statistische Aussagen möglich sind \cite{Cremer1996}.
+    \item Der Exciter wurde nicht als Masse-Feder-System modelliert; seine Masse und lokale Steifigkeit beeinflussen die Modenstruktur.
+    \item Die Sandwichstruktur und ihre frequenzabhängige Dämpfung wird durch das monolithische Modell nur näherungsweise erfasst.
+    \item Die Übernahme des E-Moduls von KAPA Graph für KAPA Line kann zu systematischen Frequenzverschiebungen führen.
 \end{itemize}
 
-Insgesamt zeigt die Validierung, dass die Simulation trotz ihrer Vereinfachungen einen belastbaren Beitrag zur Exciter-Positionierung liefert. Die systematische Übereinstimmung zwischen vorhergesagten Knotenlinien und gemessenen Frequenzgang-Einbrüchen belegt, dass der gewählte Ansatz physikalisch fundiert ist und nicht lediglich zufällig zu besseren Ergebnissen führt.
+\subsection{Vergleich mit dem Bose-Referenzlautsprecher}
+
+Im Tiefton bewegt sich die Bose-Referenz mit 43,0 bis 51,8\,dB im Mittelfeld der DML-Konfigurationen; die für DML erwartete eingeschränkte Tieftonwiedergabe \cite{Harris2000} fällt erst unterhalb von 80\,Hz deutlich gegenüber Bose aus.
+
+Oberhalb von 2\,kHz fällt die Bose-Referenz im FRF um etwa 30\,dB ab, während die DML-Konfigurationen Pegel zwischen 60 und 85\,dB halten. Im SPL-Spektrum erreicht Bose oberhalb von 14\,kHz nur 19,6 bis 29,2\,dB gegenüber 33 bis 57\,dB der DML-Varianten. Diese breitbandige Hochtonabstrahlung ergibt sich aus der Vielzahl gleichzeitig schwingender, phasenverschobener Plattenbereiche \cite{Harris2000,Bai2001}.
+
+Die Pegelschwankung der DML-Konfigurationen liegt mit 25 bis 30\,dB unter der Schwankung der Bose-Referenz von 38\,dB. Während Bose typische Kolbenstrahler-Merkmale wie Tiefton-Hochpass, Mitten-Plateau und kontinuierlichen Hochtonabfall zeigt, weisen die DML-Konfigurationen die für Plattenresonatoren typische, modenbedingte Welligkeit auf \cite{Cremer1996}.
+
+\subsection{Validierung der Richtcharakteristik}
+
+Die in Abbildung~\ref{fig:schallfeld_normiert} dargestellte horizontale Richtcharakteristik der 70$\times$44\,cm Platte stimmt mit den theoretischen Erwartungen überein. Bei 63\,Hz schwankt der Pegel über alle Winkel um nur etwa 9\,dB, was einer nahezu omnidirektionalen Abstrahlung entspricht. Die Wellenlänge $\lambda = 343/63 \approx 5{,}4$\,m ist hier ein Vielfaches der Plattendiagonale von 0,83\,m, sodass die Platte als kompakte Quelle wirkt \cite{Moeser2005}.
+
+Zwischen 250\,Hz und 1\,kHz bildet sich die für freihängende DML-Platten charakteristische Dipolform mit Maxima bei $0^\circ$ und $180^\circ$ sowie Einbrüchen von 15 bis 25\,dB bei $90^\circ$ und $270^\circ$ aus. Dieses Verhalten resultiert aus der gegenphasigen Abstrahlung der Plattenseiten \cite{Harris2000}; aufgrund der endlichen Plattenfläche sind die Nullstellen weniger scharf als bei einem idealen Punktdipol \cite{Cremer1996}. Oberhalb von 2\,kHz fragmentiert das Abstrahlmuster zunehmend, was mit der phasenverschobenen Abstrahlung vieler gleichzeitig schwingender Plattenbereiche übereinstimmt \cite{Harris2000,Bai2001}.
 
 \subsection{Diskussion möglicher Fehlerquellen}
 
-Neben den methodischen Grenzen der Simulation sind bei der Interpretation der Messergebnisse weitere Fehlerquellen zu berücksichtigen:
+Die Winkelpositionierung der Platte erfolgte manuell in \SI{15}{\degree}-Schritten per Laserprojektion. Abweichungen von wenigen Grad können bei hohen Frequenzen die schmalen Keulen verfälschen.
 
-Die Winkelpositionierung der Platte erfolgte manuell anhand von Bodenmarkierungen in \SI{15}{\degree}-Schritten. Da die Ausrichtung per grober Laserprojektion vorgenommen wurde, ist davon auszugehen, dass die tatsächlichen Winkelpositionen nicht exakt den Sollwerten entsprachen. Bereits Abweichungen von wenigen Grad können bei hohen Frequenzen, wo schmale Keulen auftreten, zu merklichen Verfälschungen der gemessenen Richtcharakteristik führen.
+Der Messabstand von \SI{1}{\metre} erfüllt die Fraunhofer-Fernfeldbedingung $r > 2D^2/\lambda$ \cite{Lerch2009} für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ nur bis zu einer Grenzfrequenz von $f < c/(2D^2) \approx \SI{350}{\hertz}$. Bereits ab dem unteren Mittelton befinden sich die Messungen damit im geometrischen Nahfeld der Platte; bei \SI{4}{\kilo\hertz} wäre ein Abstand von ca.\ \SI{11}{\metre}, bei \SI{16}{\kilo\hertz} von ca.\ \SI{46}{\metre} erforderlich. Im Nahfeld gemessene Pegel und Richtmuster können daher von der tatsächlichen Fernfeldabstrahlung abweichen.
 
-Der Messabstand von \SI{1}{\metre} erfüllt die Fernfeldbedingung $r > 2D^2/\lambda$ nur bis etwa \SI{4}{\kilo\hertz}. Für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ ergibt sich bei \SI{4}{\kilo\hertz} ein Mindestabstand von ca.\ \SI{1{,}14}{\metre}. Die Messungen bei \SI{8}{\kilo\hertz} und \SI{16}{\kilo\hertz} befinden sich somit im geometrischen Nahfeld der Platte, was die gemessene Richtcharakteristik gegenüber der tatsächlichen Fernfeldabstrahlung verzerren kann.
+Im Freifeldraum befanden sich während der Messung zudem Stativkonstruktionen, Messgeräte, Gitterroste am Boden sowie ein Verbrennungsmotor auf einem Gestell, wie in Abbildung~\ref{fig:messaufbau_freifeldraum} zu erkennen ist. Diese können im Hochtonbereich als reflektierende Flächen wirken.
 
-Obwohl der Freifeldraum reflexionsarm ausgelegt ist, befanden sich während der Messung Gegenstände im Raum -- unter anderem Stativkonstruktionen, Messgeräte und Gitterroste am Boden sowie ein Verbrennungsmotor auf einem Gestell, wie in Abbildung~\ref{fig:messaufbau_freifeldraum} zu erkennen ist. Diese können insbesondere im Hochtonbereich als reflektierende Flächen wirken und das gemessene Schallfeld verfälschen.
-
-Zudem kann durch die Messunsicherheit des DAQ sowie des verwendeten Messmikrofons eine Verfälschung der Messwerte entstehen. Unter Berücksichtigung dieser möglichen Messungenauigkeiten kann dennoch davon ausgegangen werden, dass die Messergebnisse aussagekräftig sind, da sie die charakteristischen Eigenschaften von DML-Lautsprechern -- insbesondere die Dipolcharakteristik und die modenbedingte Frequenzgang-Welligkeit -- konsistent wiedergeben. 
+Trotz dieser Fehlerquellen sind die Messergebnisse aussagekräftig, da sie die charakteristischen Eigenschaften von DML-Lautsprechern -- Dipolcharakteristik, modenbedingte Welligkeit und ausgeprägte Hochtonabstrahlung gegenüber konventionellen Lautsprechern -- konsistent wiedergeben.
 
 
 
