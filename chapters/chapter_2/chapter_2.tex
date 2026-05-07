@@ -63,7 +63,7 @@ Deckschichten bezeichnen \cite{Wiedemann2006}. Der quadratische Zusammenhang des
 
 Neben der Steifigkeit und Masse spielt auch die innere Dämpfung des Panelmaterials eine wichtige Rolle. Eine zu geringe Dämpfung führt zu starken, langanhaltenden Resonanzspitzen im Frequenzgang, was den Klang deutlich verfärbt. Eine zu hohe Dämpfung hingegen reduziert die Schallabstrahlungseffizienz und kann bei niedrigen Frequenzen zu einer Verschleierung der Modulationsstruktur führen \cite{Moeser2010}. Ein optimales Dämpfungsniveau liegt im Bereich, bei dem Resonanzamplituden kontrolliert bleiben, ohne die Abstrahlung wesentlich zu beeinträchtigen. Bei der Auswahl des Panelmaterials sollte daher das Gleichgewicht zwischen Steifigkeit, Masse und Dämpfung abgestimmt werden. Dabei ist zu beachten, dass ein niedriges Verhältnis B/$m''$ die Modendichte erhöht und die erste Eigenfrequenz absenkt \cite{Moeser2010}. Gleichzeitig muss eine ausreichende innere Dämpfung gegeben sein, um Resonanzspitzen zu unterdrücken. 
 
-Die Tabelle \ref{tab:materialvergleich} „Materialvergleich für DML" vergleicht verschiedene Materialien anhand ihrer Flächenmasse $m''$ und ihrer inneren Dämpfung. Dabei wird die innere Dämpfung in die Kategorien sehr niedrig bis mittel unterteilt.  
+Die Tabelle \ref{tab:materialvergleich} Materialvergleich für DML vergleicht verschiedene Materialien anhand ihrer Flächenmasse $m''$ und ihrer inneren Dämpfung. Dabei wird die innere Dämpfung in die Kategorien sehr niedrig bis mittel unterteilt.  
 
 \begin{table}[htbp]
 \centering
@@ -361,15 +361,11 @@ Die wesentlichen Unterschiede zwischen DML- und konventionellen Lautsprechern si
 
 \section{Lautsprechervermessung}
 
-Bei der akustischen Vermessung von Lautsprechern ist das Ziel, das Übertragungsverhalten des Systems über einen möglichst breiten Frequenzbereich zu bestimmen, um Lautsprecher objektiv miteinander vergleichen zu können \cite{Goerne2011}. Von besonderem Interesse sind dabei der Schalldruckpegel SPL über der Frequenz, dieser wird als Frequenzgang bezeichnet und die Übertragungsfunktion. Da ein Lautsprecher ein frequenzabhängiges dynamisches System darstellt, reicht die Anregung mit einem einzelnen Sinuston nicht aus, um sein vollständiges Verhalten zu charakterisieren. Stattdessen werden Signale verwendet, die entweder den gesamten relevanten Frequenzbereich gleichzeitig oder nacheinander anregen. In der elektroakustischen Messtechnik wird dafür ein Sweepsignal oder ein Weißes Rauschen verwendet.
+Bei der akustischen Vermessung von Lautsprechern besteht das Ziel darin, das frequenzabhängige Übertragungsverhalten des Systems über einen definierten Messbereich zu erfassen. Auf dieser Grundlage können Lautsprechersysteme objektiv beschrieben und miteinander verglichen werden \cite{Goerne2011}. Wesentliche Bewertungsgrößen sind dabei der Schalldruckpegel über der Frequenz, also der Frequenzgang, sowie die Übertragungsfunktion des Systems.
 
-Zur Vermessung von Lautsprechern werden Sweep-Signale oder Weißes Rauschen verwendet, da ein Lautsprecher ein frequenzabhängiges dynamisches System ist. Ein einzelner Sinuston beschreibt nur das Verhalten bei einer bestimmten Frequenz und reicht daher nicht aus, um den gesamten Übertragungsbereich zu charakterisieren. Sweep-Signale regen die Frequenzen nacheinander an, während Weißes Rauschen viele Frequenzanteile gleichzeitig enthält. In beiden Fällen kann aus dem Verhältnis von Eingangs- und Ausgangssignal die frequenzabhängige Übertragungsfunktion bestimmt werden. Dadurch lassen sich Resonanzen, Pegelüberhöhungen, Einbrüche und das allgemeine Übertragungsverhalten des Lautsprechers erfassen.
+Da Lautsprecher frequenzabhängige dynamische Systeme darstellen, ist eine Anregung mit einem einzelnen Sinuston nur für die Bewertung einer einzelnen Frequenz geeignet. Zur Beschreibung des gesamten relevanten Frequenzbereichs werden daher breitbandige oder frequenzdurchlaufende Anregungssignale eingesetzt. In der elektroakustischen Messtechnik werden hierfür insbesondere Sweepsignale und weißes Rauschen verwendet.
 
-Ein Sweep-Signal ist ein Anregungssignal, bei dem sich die Frequenz des Signals kontinuierlich mit der Zeit ändert. In der Praxis wird häufig ein linearer oder logarithmischer Sinus-Sweep eingesetzt.
-
-Diese beiden Anregungssignale unterscheiden sich in der Wiedergabe der Frequenzen, da ein Sweep-Signal in einem bestimmten Frequenzbereich jede Frequenz einzeln nacheinander abspielt, während beim weißen Rauschen alle Frequenzen gleichzeitig angeregt werden. 
-
-Obwohl Sweep und weißes Rauschen in ihrem zeitlichen Aufbau verschieden sind, verfolgen beide Verfahren mathematisch dasselbe Ziel, nämlich die Bestimmung der frequenzabhängigen Übertragungsfunktion \(H(f)\) des Lautsprechers. Für ein lineares zeitinvariantes System gilt im Frequenzbereich der Zusammenhang
+Sweepsignale durchlaufen den betrachteten Frequenzbereich zeitlich nacheinander, während weißes Rauschen viele Frequenzanteile gleichzeitig enthält. Beide Verfahren ermöglichen die Bestimmung der frequenzabhängigen Übertragungsfunktion aus dem Verhältnis von Ausgangs- zu Eingangssignal. Dadurch können Resonanzen, Pegelüberhöhungen, Einbrüche und das grundsätzliche Übertragungsverhalten des Lautsprechers erfasst werden.Für ein lineares zeitinvariantes System gilt im Frequenzbereich der Zusammenhang.
 
 \begin{equation}
 Y(f) = H(f) \cdot X(f)
@@ -387,9 +383,9 @@ Daraus ergibt sich die Übertragungsfunktion zu:
 H(f) = \frac{Y(f)}{X(f)}.
 \end{equation}
 
-Dieser Zusammenhang ist unabhängig davon, ob als Anregungssignal ein Sweep oder weißes Rauschen verwendet wird. Entscheidend ist, dass das Anregungssignal den zu messenden Frequenzbereich ausreichend anregt und dass das Eingangsspektrum in diesem Bereich nicht verschwindet. Mathematisch betrachtet sind beide Verfahren daher gleichwertig, da sie auf dieselbe Systembeschreibung führen. Der Unterschied liegt daher nicht in der Zielgröße, sondern in der Art der Anregung und in der praktischen Durchführung der Messung.
+Dieser Zusammenhang gilt unabhängig davon, ob ein Sweep oder weißes Rauschen als Anregungssignal verwendet wird. Entscheidend ist, dass der relevante Frequenzbereich ausreichend angeregt wird. Beide Verfahren führen mathematisch zur gleichen Übertragungsfunktion; sie unterscheiden sich lediglich in der Art der Anregung und der praktischen Messdurchführung.
 
-Die Vor- und Nachteile der beiden Messverfahren werden in Tabelle 2.2 noch einmal zusammengefasst dargestellt.
+Die Vor- und Nachteile der beiden Messverfahren werden in Tabelle \ref{tab:sweep_weissrauschen} noch einmal zusammengefasst dargestellt.
 
 \begin{table}[h]
 \centering
@@ -451,7 +447,7 @@ Die Vor- und Nachteile der beiden Messverfahren werden in Tabelle 2.2 noch einma
 
 Beim Sweep erfolgt die Anregung frequenzselektiv und zeitlich geordnet. Dies führt in der Regel zu einem sehr guten Signal-Rausch-Verhältnis, da die Energie des Eingangssignals zu jedem Zeitpunkt auf einen schmalen Frequenzbereich konzentriert ist. Zusätzlich lassen sich Impulsantworten und Verzerrungsanteile häufig besonders präzise bestimmen.
 
-Bei weißem Rauschen ist die Energie dagegen gleichzeitig auf den gesamten Frequenzbereich verteilt, wodurch der Energieanteil pro Einzelfrequenz geringer ausfällt. Dies macht das Verfahren prinzipiell empfindlicher gegenüber Störgeräuschen und Messunsicherheiten. Gleichzeitig ermöglicht es jedoch eine sehr schnelle breitbandige Systemanregung und eignet sich daher gut für Übersichts- oder Echtzeitmessungen.
+Beim weißen Rauschen ist die Energie dagegen gleichzeitig auf den gesamten Frequenzbereich verteilt, wodurch der Energieanteil pro Einzelfrequenz geringer ausfällt. Dies macht das Verfahren empfindlicher gegenüber Störgeräuschen und Messunsicherheiten. Gleichzeitig ermöglicht es jedoch eine sehr schnelle breitbandige Systemanregung und eignet sich daher gut für Übersichts- oder Echtzeitmessungen.
 
 
 \newpage
