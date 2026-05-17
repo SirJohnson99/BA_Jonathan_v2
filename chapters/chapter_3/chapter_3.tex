@@ -450,7 +450,7 @@ Im Rahmen der Simulation wurden zwei KAPA Line Platten mit den Größen \SI{1}{\
 
 Die Anregung der Platten wird im Rahmen einer Eigenfrequenzanalyse untersucht. Dabei werden die Eigenmoden der Platten im Frequenzbereich ab 0Hz bis zur 400. Eigenmode berechnet. Die Anzahl der Eigenmoden wurde gewählt, da diese für beide Platten die 1.000 Hz überschritten haben und die Modendichte mit zunehmender Frequenz zunimmt \cite{Cremer1996}. Im Konzeptentwurf wurde eine freihängende Lagerung ausgewählt. Aus diesem Grund wird die Platte in der Simulation ohne zusätzliche Lagerbedingungen modelliert.
 
-Der Modellaufbau der Platte in COMSOL Multiphysics ist in Anhang F dargestellt und zeigt die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei \SI{0}{\hertz} und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
+Der Modellaufbau der Platte in COMSOL Multiphysics ist in Anhang E dargestellt und zeigt die Platte, welche mit einem Netz bespannt ist. In der Studie ist die gewünschte Anzahl der Eigenfrequenzen auf 400 eingestellt und die Berechnung startet bei \SI{0}{\hertz} und endet, wenn 400 Eigenmoden der Platte berechnet wurden. 
 
 
 \subsection{Durchgeführte Simulationsstudien und Ergebnisse}
@@ -550,7 +550,7 @@ In dieser Arbeit wird LabVIEW verwendet, um den DML-Lautsprecher auf seine akust
 \end{figure}
 
 Abbildung \ref{fig:blockschaltbild_exciter} zeigt den Signalfluss des Versuchsaufbaus im Freifeldraum in Form eines Blockschaltbildes. Als Testsignal wird in LabVIEW ein weißes Rauschen erzeugt, das über den Ausgang der NI PXI-6733 Datenausgabekarte an den Audioverstärker weitergeleitet wird. Das vom Verstärker verstärkte elektrische Signal wird anschließend über den Lautsprecherausgang sowohl an die verwendeten Exciter als auch an einen Step-Down-Converter geführt.
-Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Das zugehörige Datenblatt des Step-Down-Converters ist Anhang L zu entnehmen. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
+Der Step-Down-Converter reduziert die Spannung des Verstärkerausgangssignals und stellt ein Referenzsignal bereit, das zur Bestimmung der Übertragungsfunktion verwendet wird. Dieses Referenzsignal wird auf einen Eingang der NI PXI-4472B Datenerfassungskarte geführt. Das zugehörige Datenblatt des Step-Down-Converters ist Anhang K zu entnehmen. Parallel dazu wandeln die Exciter das verstärkte elektrische Signal in mechanische Schwingungen um, wodurch das DML-Panel angeregt wird und Schallwellen erzeugt.
 Die abgestrahlten Schallwellen werden vom Messmikrofon aufgenommen und in ein elektrisches Signal umgewandelt. Dieses Mikrofonsignal wird ebenfalls auf einen Eingang der NI PXI-4472B Datenerfassungskarte geleitet. Somit liegen sowohl das Referenzsignal als auch das Messsignal gleichzeitig in digitaler Form vor.
 Die erfassten Eingangssignale werden in LabVIEW umgerechnet und gemittelt, sodass aus dem Referenz- und Messsignal die frequenzabhängige Übertragungsfunktion des Lautsprechers bestimmt werden kann. Dadurch ist eine objektive Bewertung des Frequenzgangs sowie des Schalldruckpegels unter definierten Freifeldbedingungen möglich.
 
@@ -569,7 +569,7 @@ Das Blockschaltbild in LabVIEW stellt die Datenerzeugung und -verarbeitung dar u
 \end{enumerate}
 
 
- Vor der While-Schleife werden Parameter mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons, welche aus dem Datenblatt im Anhang H entnommen werden kann. Zusätzlich lassen sich die Abtastparameter festlegen, diese bestimmen die Blockgröße und Anzahl der Mittelungen. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz fs und der Blocklänge N.
+ Vor der While-Schleife werden Parameter mittels Bedienelement erstellt. Dazu zählen die Input- und Output-Kanäle des DAQ und die Mikrofonempfindlichkeit des verwendeten Mikrofons, welche aus dem Datenblatt im Anhang J entnommen werden kann. Zusätzlich lassen sich die Abtastparameter festlegen, diese bestimmen die Blockgröße und Anzahl der Mittelungen. Die Anzahl der pro Datenblock verarbeiteten Abtastwerte ergibt sich aus der Abtastfrequenz fs und der Blocklänge N.
  
  \begin{equation}
 \Delta f = \frac{f_s}{N}
@@ -766,7 +766,7 @@ Ein Kohärenzwert nahe 1 zeigt an, dass das Ausgangssignal bei der jeweiligen Fr
 
 Zur Untersuchung der akustischen Eigenschaften des DML-Systems wurden im Rahmen dieser Arbeit zwei Versuchsaufbauten umgesetzt. Um die Vergleichbarkeit der Messergebnisse zu gewährleisten, wurden die Einstellungen des Equalizers und des Audioverstärkers über alle Messungen hinweg konstant gehalten. Der Gain des Equalizers wurde auf den Wert 5 und die Lautstärke des Audioverstärkers auf den Wert 10 eingestellt. Eine Signalanpassung durch den Equalizer erfolgte nicht. Die Temperatur und Luftfeuchtigkeit waren während der Messungen konstant bei \SI{21}{\degreeCelsius} und 25\,\% Luftfeuchtigkeit.
 
-Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden zwei verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Bei den Plattengrößen handelt es sich um das Herstellermaß von 100 $\times$ 70\,cm und um das mit dem angepassten Seitenverhältnis von 70 $\times$ 44\,cm. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter. Die exakten Exciterpositionen können den technischen Zeichnungen aus Anhang M--P entnommen werden. Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert. 
+Der erste Versuchsaufbau dient der Erfassung von den akustischen Eigenschaften des DML, hierbei werden zwei verschiedene Plattengrößen und jeweils unterschiedliche Exciter-Positionen vermessen. Bei den Plattengrößen handelt es sich um das Herstellermaß von 100 $\times$ 70\,cm und um das mit dem angepassten Seitenverhältnis von 70 $\times$ 44\,cm. Verglichen werden die Ergebnisse aus der Simulation, Kapitel 3.3.3 und die vom Hersteller angegebenen Positionen für die Exciter. Die exakten Exciterpositionen können den technischen Zeichnungen aus Anhang L--O entnommen werden. Zur Vermessung werden die Platten im Freifeldraum an Schnüren aufgehängt. Das Messmikrofon wird einen Meter vor der Plattenmitte positioniert. 
 
 \begin{figure}[H]
 	\centering
