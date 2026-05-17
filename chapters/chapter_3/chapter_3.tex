@@ -1146,7 +1146,7 @@ Um die Aussagekraft der simulationsgestützten Exciter-Positionierung zu bewerte
 
 \subsection{Vergleich der simulierten Eigenfrequenzen mit gemessenen Resonanzen}
 
-Die Eigenfrequenzanalyse in COMSOL berechnet für die 70$\times$44\,cm KAPA Line Platte 400 Eigenmoden ab 0\,Hz, deren höchste Frequenzen oberhalb von 1\,kHz liegen. Aus diesem Modenspektrum sind in Abbildung~\ref{fig:eigenmoden_07m} sechs repräsentative Modenformen bei 50, 150, 300, 500, 800 und 1000\,Hz dargestellt. Eine simulierte Eigenfrequenz erzeugt im FRF entweder ein lokales Maximum, sofern der Exciter die zugehörige Mode anregt, oder ein lokales Minimum, sofern er auf einer Knotenlinie der Mode liegt \cite{Cremer1996}. Tabelle~\ref{tab:eigenfrequenz_vergleich} fasst die Zuordnung zwischen den Eigenfrequenzen und dem FRF-Verhalten der 70$\times$44\,cm Platte zusammen.
+Die Eigenfrequenzanalyse in COMSOL berechnet für die 70$\times$44\,cm KAPA Line Platte 400 Eigenmoden ab 0\,Hz, deren höchste Frequenzen oberhalb von 1\,kHz liegen. Aus diesem Modenspektrum sind in Abbildung~\ref{fig:eigenmoden_07m} sechs Modenformen bei 50, 150, 300, 500, 800 und 1000\,Hz dargestellt. Eine simulierte Eigenfrequenz erzeugt im FRF entweder ein lokales Maximum, sofern der Exciter die zugehörige Mode anregt, oder ein lokales Minimum, sofern er auf einer Knotenlinie der Mode liegt \cite{Cremer1996}. Tabelle~\ref{tab:eigenfrequenz_vergleich} fasst die Zuordnung zwischen den Eigenfrequenzen und dem FRF-Verhalten der 70$\times$44\,cm Platte zusammen.
 
 \begin{table}[H]
 \centering
@@ -1158,20 +1158,20 @@ Die Eigenfrequenzanalyse in COMSOL berechnet für die 70$\times$44\,cm KAPA Line
 \hline
 ca.\ 50\,Hz & nicht erfasst & nicht erfasst & außerhalb der Datenpunkte \\
 \hline
-ca.\ 150\,Hz & 82,9\,dB (Trog) & 81,7\,dB (Trog) & Knotenlinie nahe beider Positionen \\
+ca.\ 150\,Hz & 82,9\,dB & 81,7\,dB & Knotenlinie nahe beider Positionen \\
 \hline
 ca.\ 300\,Hz & 97,4\,dB (Maximum) & 88,2\,dB & Maximum bei Hersteller \\
 \hline
 ca.\ 500\,Hz & 98,8\,dB (Maximum) & 95,6\,dB (Maximum) & Maximum bei beiden \\
 \hline
-ca.\ 800\,Hz & 86,5\,dB (Trog) & 85,0\,dB (Trog) & Knotenlinie nahe beider Positionen \\
+ca.\ 800\,Hz & 86,5\,dB & 85,0\,dB & Knotenlinie nahe beider Positionen \\
 \hline
 ca.\ 1000\,Hz & 92,7\,dB & 89,8\,dB & moderate Pegel, kein klares Merkmal \\
 \hline
 \end{tabularx}
 \end{table}
 
-Die Modenformen bei 300 und 500\,Hz korrelieren mit deutlichen Pegelmaxima, während bei 150 und 800\,Hz beide Exciter-Positionen lokale Minima zeigen, was auf Knotenlinien nahe beider Positionen hindeutet. Diese Beobachtung wird in Abschnitt~\ref{subsec:knotenlinien} vertieft. Oberhalb von 2\,kHz nimmt die Modendichte stark zu, sodass einzelne Eigenmoden nicht mehr eindeutig zugeordnet werden können \cite{Cremer1996}. Die Abweichungen zwischen simulierten und gemessenen Frequenzen lassen sich auf die monolithische Ersatzmodellierung der Sandwichplatte, die Übernahme des E-Moduls von KAPA Graph für KAPA Line sowie die Vernachlässigung des Exciters im FEM-Modell zurückführen.
+Die Modenformen bei 300\,Hz und 500\,Hz korrelieren mit deutlichen Pegelmaxima, während bei 150\,Hz und 800\,Hz beide Exciter-Positionen lokale Minima zeigen, was auf Knotenlinien nahe beider Positionen hindeutet. Diese Beobachtung wird in Abschnitt~\ref{subsec:knotenlinien} vertieft. Oberhalb von 2\,kHz nimmt die Modendichte stark zu, sodass einzelne Eigenmoden nicht mehr eindeutig zugeordnet werden können \cite{Cremer1996}. Die Abweichungen zwischen simulierten und gemessenen Frequenzen lassen sich auf die monolithische Ersatzmodellierung der Sandwichplatte, die Übernahme des E-Moduls von KAPA Graph für KAPA Line sowie die Vernachlässigung des Exciters im FEM-Modell zurückführen.
 
 \subsection{Korrelation zwischen Knotenlinien und Frequenzgang-Einbrüchen}
 \label{subsec:knotenlinien}
@@ -1213,7 +1213,7 @@ Zwischen 250\,Hz und 1\,kHz bildet sich die für freihängende DML-Platten chara
 
 \subsection{Diskussion möglicher Fehlerquellen}
 
-Die Winkelpositionierung der Platte erfolgte manuell in \SI{15}{\degree}-Schritten per Laserprojektion. Abweichungen von wenigen Grad können bei hohen Frequenzen die schmalen Keulen verfälschen.
+Die Winkelpositionierung bei der Richtcharakteristik messung der Platte, erfolgte manuell in \SI{15}{\degree}-Schritten mit hilfe von Laserprojektion. Abweichungen von wenigen Grad können bei hohen Frequenzen die schmalen Keulen verfälschen.
 
 Der Messabstand von \SI{1}{\metre} erfüllt die Fraunhofer-Fernfeldbedingung $r > 2D^2/\lambda$ \cite{Lerch2009} für die größte Plattenabmessung $D = \SI{0{,}7}{\metre}$ nur bis zu einer Grenzfrequenz von $f < c/(2D^2) \approx \SI{350}{\hertz}$. Bereits ab dem unteren Mittelton befinden sich die Messungen damit im geometrischen Nahfeld der Platte; bei \SI{4}{\kilo\hertz} wäre ein Abstand von ca.\ \SI{11}{\metre}, bei \SI{16}{\kilo\hertz} von ca.\ \SI{46}{\metre} erforderlich. Im Nahfeld gemessene Pegel und Richtmuster können daher von der tatsächlichen Fernfeldabstrahlung abweichen.
 
