@@ -397,7 +397,7 @@ Randdämpfung &
 
 \vspace{0.2cm}
 \scriptsize
-\textbf{Quellen:} \cite{Cremer1996}; \cite{Moeser2010}; \cite{Bai2001}.
+\textbf{Quellen:} \cite{Bai2001}, \cite{Cremer1996}, \cite{Moeser2010}.
 \end{table}
 
 
@@ -479,7 +479,7 @@ Die Legende, welche in den Abbildungen \ref{fig:eigenmoden_07m} und \ref{fig:eig
 
  
 
-Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen eine geringe Verschiebung auftritt, als gut und dort, wo eine hohe Verschiebung auftritt, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. Das Skript berechnet für jede mögliche Kombination aus zwei Exciter-Positionen einen Score-Wert, der die Güte der Modenanregung quantifiziert. Die zehn besten Positionspaare werden tabellarisch ausgegeben, wobei neben dem Score auch die prozentuale Modenabdeckung und der minimale Abstand zwischen den Excitern angegeben werden.
+Die Plattenverschiebung bei den Eigenfrequenzen wird in der Auswertung genutzt, um die Positionen der Exciter zu bestimmen. Hierfür wurden die Daten der Simulation in Abhängigkeit zu einer durch die Mitte der Platte verlaufenden Referenzebene exportiert. Dabei wurde ein Raster über die Platte zur Auswertung der einzelnen Punkte gelegt. Anschließend wurden die Daten in einem Python-Skript anhand ihrer Verschiebung ausgewertet. Dabei wurden Punkte, an denen viele Moden angeregt werden, als gut und dort, wenig Moden angeregt werden, als schlecht bewertet. Anhand dieser Bewertung wurde die ideale Position für zwei Exciter auf der Platte bestimmt. Das Skript berechnet für jede mögliche Kombination aus zwei Exciter-Positionen einen Score-Wert, der die Güte der Modenanregung quantifiziert. Die zehn besten Positionspaare werden tabellarisch ausgegeben, wobei neben dem Score auch die prozentuale Modenabdeckung und der minimale Abstand zwischen den Excitern angegeben werden.
 
 \begin{figure}[H]
 	\centering
